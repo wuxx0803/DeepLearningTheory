@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: deepLearningTheory.aux
+The style file: plain.bst
+Database file #1: refs.bib
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            532 strings with 4781 characters,
+and the built_in function-call counts, 1779 in all, are:
+= -- 183
+> -- 64
+< -- 1
++ -- 25
+- -- 20
+* -- 123
+:= -- 287
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 25
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 68
+empty$ -- 147
+format.name$ -- 20
+if$ -- 375
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 54
+stack$ -- 0
+substring$ -- 152
+swap$ -- 17
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 0
+while$ -- 19
+width$ -- 6
+write$ -- 56

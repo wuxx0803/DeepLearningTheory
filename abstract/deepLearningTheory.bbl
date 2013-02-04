@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{baldi2012autoencoders}
+P.~Baldi.
+\newblock Autoencoders, unsupervised learning, and deep architectures.
+\newblock {\em Journal of Machine Learning Research}, 2012.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems 25}, pages
+  1106--1114, 2012.
+
+\bibitem{le2010deep}
+N.~Le~Roux and Y.~Bengio.
+\newblock Deep belief networks are compact universal approximators.
+\newblock {\em Neural computation}, 22(8):2192--2207, 2010.
+
+\bibitem{siegelmann1995computational}
+H.T. Siegelmann and E.D. Sontag.
+\newblock On the computational power of neural nets.
+\newblock {\em Journal of computer and system sciences}, 50(1):132--150, 1995.
+
+\bibitem{sutskever2008deep}
+I.~Sutskever and G.E. Hinton.
+\newblock Deep, narrow sigmoid belief networks are universal approximators.
+\newblock {\em Neural Computation}, 20(11):2629--2636, 2008.
+
+\end{thebibliography}
