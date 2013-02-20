@@ -15,8 +15,8 @@ numTrainingExamples = size(X, 2);
 % data = data';
 
 hiddenSize = 25;
-lambda = 0.01;
-beta = 10;
+lambda = 0.05;
+beta = 5;
 rho = 0.1;
 
 theta = initializeParameters(hiddenSize, inputSize);
