@@ -1,5 +1,5 @@
-function [cost,grad] = sparseAutoencoderCost(theta, visibleSize, hiddenSize, ...
-                                             lambda, sparsityParam, beta, data)
+function [cost,grad] = sparseAutoencoderCostVectorized(theta, visibleSize, hiddenSize, ...
+                                             lambda, rho, beta, data)
 
 % visibleSize: the number of input units (probably 64) 
 % hiddenSize: the number of hidden units (probably 25) 
@@ -43,31 +43,26 @@ b2grad = zeros(size(b2));
 % 
 
 numExamples = size(data, 2);
-rho = sparsityParam;
 
 % Forward propogation for all examples
 a2 = sigmoid(W1 * data + repmat(b1, 1, numExamples));
 a3 = sigmoid(W2 * a2 + repmat(b2, 1, numExamples));
 
+% Compute average activations of all hidden neurons
 rhoHat = mean(a2, 2);
 sparseDelta = beta * ((1 - rho) ./ (1 - rhoHat) - rho ./ rhoHat);
 
 % Backward propogation for all examples
-delta3 = -(data - a3) .* a3 .* (1 - a3);
+diff = data - a3;
+delta3 = -diff .* a3 .* (1 - a3);
 delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* a2 .* (1 - a2);
 
-cost = trace((data - a3) * (data - a3)') / 2;
-W1grad = delta2 * data';
-W2grad = delta3 * a2';
-b1grad = sum(delta2, 2);
-b2grad = sum(delta3, 2);
-
-cost = cost / numExamples;
-
-W1grad = W1grad / numExamples;
-W2grad = W2grad / numExamples;
-b1grad = b1grad / numExamples;
-b2grad = b2grad / numExamples;
+% Square difference term for cost and gradient
+cost = trace(diff * diff') / (2 * numExamples);
+W1grad = (delta2 * data') / numExamples;
+W2grad = (delta3 * a2') / numExamples;
+b1grad = sum(delta2, 2) / numExamples;
+b2grad = sum(delta3, 2) / numExamples;
 
 % Add regularization term to cost and gradient
 cost = cost + (lambda / 2) * (norm(W1, 'fro')^2 + norm(W2, 'fro')^2);
