@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  20 FEB 2013 19:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  20 FEB 2013 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,53 +110,221 @@ LaTeX Info: Redefining \] on input line 2667.
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks20
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count100
+\Gm@cntv=\count101
+\c@Gm@tempcnt=\count102
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks22
+)
 (./progressReport.aux)
 \openout1 = `progressReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen122
+\scratchbox=\box28
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen123
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(62.59596pt, 489.10307pt, 62.59596pt)
+* v-part:(T,H,B)=(62.59596pt, 669.77806pt, 62.59596pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=489.10307pt
+* \textheight=669.77806pt
+* \oddsidemargin=-9.67403pt
+* \evensidemargin=-9.67403pt
+* \topmargin=-9.67403pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Underfull \hbox (badness 1189) in paragraph at lines 50--53
-[]\OT1/cmr/m/n/10 A sparse au-toen-coder im-poses ad-di-tional con-
- []
+<sparsesigmoidnn.png, id=1, 669.50125pt x 669.50125pt>
+File: sparsesigmoidnn.png Graphic file (type png)
+
+<use sparsesigmoidnn.png>
+Package pdftex.def Info: sparsesigmoidnn.png used on input line 162.
+(pdftex.def)             Requested size: 220.09488pt x 220.0984pt.
+ <linearnn.png, id=3, 277.035pt x 277.035pt>
+File: linearnn.png Graphic file (type png)
+
+<use linearnn.png>
+Package pdftex.def Info: linearnn.png used on input line 163.
+(pdftex.def)             Requested size: 220.09488pt x 220.09381pt.
+ <pca.png, id=4, 631.35875pt x 630.355pt>
+File: pca.png Graphic file (type png)
+ <use pca.png>
+Package pdftex.def Info: pca.png used on input line 164.
+(pdftex.def)             Requested size: 220.09488pt x 219.74266pt.
+
+<nonlinearnn.png, id=5, 629.35126pt x 629.35126pt>
+File: nonlinearnn.png Graphic file (type png)
+ <use nonlinearnn.png>
+Package pdftex.def Info: nonlinearnn.png used on input line 165.
+(pdftex.def)             Requested size: 220.09488pt x 220.09378pt.
+
+(./progressReport.bbl [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 50--53
-\OT1/cmr/m/n/10 over the train-ing data which is given by $[] =
- []
-
-(./progressReport.bbl) [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/up
-dmap/pdftex.map}
-
+] [2 <./sparsesigmoidnn.png> <./linearnn.png> <./pca.png> <./nonlinearnn.png>])
+ [3
 
 ] (./progressReport.aux) ) 
 Here is how much of TeX's memory you used:
- 1175 strings out of 493488
- 13294 string characters out of 3141326
- 65935 words of memory out of 3000000
- 4508 multiletter control sequences out of 15000+200000
+ 2930 strings out of 493488
+ 39663 string characters out of 3141326
+ 107611 words of memory out of 3000000
+ 6185 multiletter control sequences out of 15000+200000
  11403 words of font info for 45 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 27i,7n,24p,232b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,32p,333b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/
@@ -169,12 +337,11 @@ cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
-12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on progressReport.pdf (1 page, 123942 bytes).
+12.pfb>
+Output written on progressReport.pdf (3 pages, 626285 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
