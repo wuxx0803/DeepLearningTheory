@@ -1,0 +1,71 @@
+\documentclass[twocolumn]{article}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Wo}{W^{(1)}}
+\newcommand{\Wt}{W^{(2)}}
+\newcommand{\bo}{b^{(1)}}
+\newcommand{\bt}{b^{(2)}}
+\newcommand{\xii}{x^{(i)}}
+
+\title{We need a title}
+\author{%\sectionsize
+    Justin Johnson \\
+    \texttt{jcjohns@stanford.edu}
+  \and
+    Bharath Ramsundar \\
+    \texttt{rbharath@stanford.edu}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Some recent applications of deep learning have utilized unsupervised pretraining to greatly improve
+their performance on classification tasks \cite{le2011building}. One of the fundamental building
+blocks of unsupervised pretraining is the sparse autoencoder. In this project we aim to develop a
+theoretical and practical understanding of different varieties of autoencoders.
+
+\section{Definitions}
+A single-layer autoencoder is a neural network with a single hidden layer that attempts to learn
+the identity function. The hidden layer activations of a trained autoencoder can then be used as a
+feature vector for the original data.
+
+More precisely, let $\Wo\in\RR^{p\times n}$ and $\Wt\in\RR^{n\times p}$ be matrices of
+weights, let $\bo\in\RR^p$ and $\bt\in\RR^n$ be bias vectors, and let $f:\RR\ra\RR$ be
+an activation function; a common choice is the sigmoid $f(z)=1/(1+e^{-z})$. These parameters
+define a neural network with a single hidden layer. For an input $x\in\RR^n$ the output of the
+network is $h_{W,b}(x)=f(\Wt f(\Wo x+\bo)+\bt)$ where $f$ is applied componentwise.
+The term $f(\Wo x+\bo)$ represents the activations of the input $x$ on the hidden layer of the
+network. To train an autoencoder, we are given data $x^{(1)},\ldots,x^{(m)}\in\RR^n$ and we must find
+$W$ and $b$ to minimize the reconstruction error $\sum_i\|h_{W,b}(\xii)-\xii\|$ under some norm;
+additional constraints such as regularization or sparsity may also be imposed.
+
+A sparse autoencoder imposes additional constraints on the hidden layer activations averaged over
+the training data which is given by $\hat\rho=\frac1m\sum_if(\Wo\xii+\bo)$. Typically we want to force
+$\hat\rho$ to be close to some desired activation level $\rho$.
+
+\section{Equivalence with PCA}
+In the case
+
+\section{Linearization}
+We considered a linearization of a neural net. That is, we defined nonlinearity
+$f$ to be the identity function. Then the function $h_{W,b}(x) =
+W^{(2)}(W^{(1)}x + b^{(1)}) + b^{(2)}$.
+% We can rewrite this as $h_{W,b}(x)
+% = W^{(2)}W^{(1)} x + b$. To simplify the problem, we constrain $W^{(2)} =
+% (W^{(1)})^T$ and $b = 0$. Let $W = W^{(1)}$. Then $h_{W,b}(x) = W^TW x$.
+We also add a $\ell^2$ sparsity constraint $\|\rho - \hat{\rho}\|_2^2$. The minimization problem then becomes
+\[\min_W \sum_{i=1}^m \|W^TWx^{(i)} - x^{(i)}\|_2^2  + \beta \|\rho - \hat{\rho}\|_2^2 \]
+We explicitly derived the gradient of the above formula and implemented gradient descent.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,9 @@
+\begin{thebibliography}{1}
+
+\bibitem{le2011building}
+Quoc~V Le, Rajat Monga, Matthieu Devin, Greg Corrado, Kai Chen, Marc'Aurelio
+  Ranzato, Jeff Dean, and Andrew~Y Ng.
+\newblock Building high-level features using large scale unsupervised learning.
+\newblock {\em arXiv preprint arXiv:1112.6209}, 2011.
+
+\end{thebibliography}
