@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.5in]{geometry}
+\usepackage{amsmath}    % need for subequations
+\usepackage{amsthm}     % need for proof environments
+\usepackage{amssymb}    % need for symbols
+\usepackage{graphicx}    % need for symbols
+\usepackage{color}      % use if color is used in text
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{moreverb}
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\V}{\mathbb{V}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Laplace}{Laplace}
+\DeclareMathOperator{\Gaussian}{Gaussian}
+\DeclareMathOperator{\cV}{\mathcal{V}}
+\DeclareMathOperator{\cF}{\mathcal{F}}
+\DeclareMathOperator{\cH}{\mathcal{H}}
+\DeclareMathOperator{\cX}{\mathcal{X}}
+\DeclareMathOperator{\cY}{\mathcal{Y}}
+\DeclareMathOperator{\cP}{\mathcal{P}}
+\DeclareMathOperator{\cN}{\mathcal{N}}
+\DeclareMathOperator{\VC}{VC}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\ML}{ML}
+\DeclareMathOperator{\EM}{EM}
+\DeclareMathOperator{\MAP}{MAP}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\LOOCV}{LOOCV}
+\DeclareMathOperator{\SV}{SV}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\N}{\mathcal{N}}
+\DeclareMathOperator{\HH}{\mathcal{H}}
+\DeclareMathOperator{\PP}{\mathbb{P}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Regret}{Regret}
+\DeclareMathOperator{\bint}{\mathbf{int}}
+\DeclareMathOperator{\dist}{\mathbf{dist}}
+\renewcommand{\P}{\PP}
+\renewcommand{\H}{\HH}
+\DeclareMathOperator{\out}{out}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\incomp}{in}
+\DeclareMathOperator{\num}{num}
+\DeclareMathOperator{\bernoulli}{Bernoulli}
+\newtheorem{lemma}{Lemma} %[section] %[chapter]
+\begin{document}
+In the reminder of this project, we will explore the effects of various
+regularization and sparsity constraints on the neural network. We will also
+consider whether higher order Taylor approximations to nonlinear neural nets
+work better in practice than our linear models. Our goal is to build intuition
+about how the various components of neural networks affect performance in hopes
+of eventually proving nontrivial theoretical bounds.
+\end{document}
