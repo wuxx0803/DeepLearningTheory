@@ -58,8 +58,10 @@ sparseDelta = beta * ((1 - rho) ./ (1 - rhoHat) - rho ./ rhoHat);
 
 % Backward propogation for all examples
 diff = data - a3;
-delta3 = -diff .* a3 .* (1 - a3);
-delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* a2 .* (1 - a2);
+[~, fp] = f(z3);
+delta3 = -diff .* fp;
+[~, fp] = f(z2);
+delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* fp;
 
 % Square difference term for cost and gradient
 cost = trace(diff * diff') / (2 * numExamples);

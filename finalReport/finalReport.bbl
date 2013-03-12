@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{bourlard1988auto}
+Herv{\'e} Bourlard and Yves Kamp.
+\newblock Auto-association by multilayer perceptrons and singular value
+  decomposition.
+\newblock {\em Biological cybernetics}, 59(4):291--294, 1988.
+
+\bibitem{hinton2006fast}
+Geoffrey~E Hinton, Simon Osindero, and Yee-Whye Teh.
+\newblock A fast learning algorithm for deep belief nets.
+\newblock {\em Neural computation}, 18(7):1527--1554, 2006.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems 25}, pages
+  1106--1114, 2012.
+
+\bibitem{le2011building}
+Quoc~V Le, Rajat Monga, Matthieu Devin, Greg Corrado, Kai Chen, Marc'Aurelio
+  Ranzato, Jeff Dean, and Andrew~Y Ng.
+\newblock Building high-level features using large scale unsupervised learning.
+\newblock {\em arXiv preprint arXiv:1112.6209}, 2011.
+
+\bibitem{lecun1998mnist}
+Yann LeCun and Corinna Cortes.
+\newblock The mnist database of handwritten digits, 1998.
+
+\bibitem{lee2009convolutional}
+Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y Ng.
+\newblock Convolutional deep belief networks for scalable unsupervised learning
+  of hierarchical representations.
+\newblock In {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning}, pages 609--616. ACM, 2009.
+
+\bibitem{ufldl-tutorial}
+Andrew Ng, Jiquan Ngiam, Chuan~Yu Foo, Yifan Mai, and Caroline Suen.
+\newblock {UFLDL} tutorial.
+\newblock \url{http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial}.
+
+\end{thebibliography}
