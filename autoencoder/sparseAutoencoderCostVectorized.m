@@ -1,4 +1,4 @@
-function [cost,grad] = sparseAutoencoderCostVectorized(theta, visibleSize, hiddenSize, f, ...
+function [cost,grad] = sparseAutoencoderCostVectorized(theta, visibleSize, hiddenSize, f, phi, ...
                                              lambda, rho, beta, data)
 % Parameters:
 % theta - weights for the neural net, arranged as a long vector
@@ -6,6 +6,8 @@ function [cost,grad] = sparseAutoencoderCostVectorized(theta, visibleSize, hidde
 % hiddenSize - Number of hidden units
 % f - transfer function; must have the form [f(z), f'(z)] = f(z) and
 %              operate componentwise on vectors
+% phi - Sparsity penalty function; must have the form 
+%       [phi(rho_hat, rho), phi'(rho_hat, rho)] = phi(rho_hat, rho)
 % lambda - Weight decay parameters
 % rho - Desired activation for the hidden units
 % beta - Weight of sparsity penalty term
@@ -54,12 +56,16 @@ a3 = f(z3);
 
 % Compute average activations of all hidden neurons
 rhoHat = mean(a2, 2);
-sparseDelta = beta * ((1 - rho) ./ (1 - rhoHat) - rho ./ rhoHat);
+% sparseDelta = beta * ((1 - rho) ./ (1 - rhoHat) - rho ./ rhoHat);
+[sparseCost, phiPrime] = phi(rhoHat, rho);
+sparseDelta = beta * phiPrime;
 
 % Backward propogation for all examples
 diff = data - a3;
-delta3 = -diff .* a3 .* (1 - a3);
-delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* a2 .* (1 - a2);
+[~, fp] = f(z3);
+delta3 = -diff .* fp;
+[~, fp] = f(z2);
+delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* fp;
 
 % Square difference term for cost and gradient
 cost = trace(diff * diff') / (2 * numExamples);
@@ -74,8 +80,8 @@ W1grad = W1grad + lambda * W1;
 W2grad = W2grad + lambda * W2;
 
 % Add sparsity term to cost
-sparseCost = sum(rho * log(rho ./ rhoHat) + (1 - rho) * log((1 - rho) ./ (1 - rhoHat)));
-cost = cost + beta * sparseCost;
+% sparseCost = sum(rho * log(rho ./ rhoHat) + (1 - rho) * log((1 - rho) ./ (1 - rhoHat)));
+cost = cost + beta * sum(sparseCost);
 
 %-------------------------------------------------------------------
 % After computing the cost and gradient, we will convert the gradients back

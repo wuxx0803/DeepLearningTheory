@@ -20,7 +20,9 @@ numgrad = zeros(size(theta));
 
 EPSILON = 0.0001;
 for i = 1:length(theta)
-    disp(['i = ' num2str(i) ' / ' num2str(length(theta))]);
+    if mod(i, 100) == 0
+        disp(['i = ' num2str(i) ' / ' num2str(length(theta))]);
+    end
     thetaP = theta;
     thetaP(i) = thetaP(i) + EPSILON;
     

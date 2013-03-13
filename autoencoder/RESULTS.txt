@@ -1,0 +1,69 @@
+Softmax on original features:
+Training accuracy: 2000 / 2000 = 100.000000%
+Testing accuracy: 1658 / 2000 = 82.900000%
+
+fig1.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1878 / 2000 = 93.900000%
+Testing accuracy: 1664 / 2000 = 83.200000%
+
+fig2.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiKL;
+softmaxLambda = 1e-4;
+Training accuracy: 1883 / 2000 = 94.150000%
+Testing accuracy: 1671 / 2000 = 83.550000%
+
+fig3.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 0;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiKL;
+softmaxLambda = 1e-4;
+Training accuracy: 1889 / 2000 = 94.450000%
+Testing accuracy: 1656 / 2000 = 82.800000%
+
+fig4.png
+hiddenSize = 100;
+lambda = 3e-3;
+beta = 0;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiKL;
+softmaxLambda = 1e-4;
+Training accuracy: 1812 / 2000 = 90.600000%
+Testing accuracy: 1583 / 2000 = 79.150000%
+
+fig5.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @identity;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1994 / 2000 = 99.700000%
+Testing accuracy: 1592 / 2000 = 79.600000%
+
+fig6.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 0;
+rho = 0.1;
+f = @identity;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1993 / 2000 = 99.650000%
+Testing accuracy: 1602 / 2000 = 80.100000%
