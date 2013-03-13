@@ -57,4 +57,35 @@ softmaxLambda = 1e-4;
 Training accuracy: 1994 / 2000 = 99.700000%
 Testing accuracy: 1592 / 2000 = 79.600000%
 
-fig6.
+fig6.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 0;
+rho = 0.1;
+f = @identity;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1993 / 2000 = 99.650000%
+Testing accuracy: 1602 / 2000 = 80.100000%
+
+fig7.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 0;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1994 / 2000 = 99.70%
+Testing accuracy: 1639 / 2000 = 81.95%
+
+fig8.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiL2;
+softmaxLambda = 1e-4;
+Training accuracy: 1893 / 2000 = 94.650000%
+Testing accuracy: 1657 / 2000 = 82.850000%
