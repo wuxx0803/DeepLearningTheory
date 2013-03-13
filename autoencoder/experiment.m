@@ -19,13 +19,13 @@ numTrainingExamples = size(X, 2);
 % data = randn(numTrainingExamples, 2) * R;
 % data = data';
 
-checkGradient = false;
+checkGradient = true;
 hiddenSize = 200;
 lambda = 3e-3;
-beta = 0;
+beta = 3;
 rho = 0.1;
-f = @identity;
-phi = @phiNone;
+f = @sigmoid;
+phi = @phiL2;
 softmaxLambda = 1e-4;
 
 % Lets do PCA
@@ -38,12 +38,13 @@ softmaxLambda = 1e-4;
 
 % Define the objective function
 J = @(p) sparseAutoencoderCostVectorized(p, inputSize, hiddenSize, f, phi, lambda, rho, beta, trainData);
-theta = initializeParameters(hiddenSize, inputSize);
 
 % Do numeric gradient checking
 if checkGradient
-    numgrad = computeNumericalGradient(J, theta);
-    [~, myGrad] = J(theta);
+    easyJ = @(p) sparseAutoencoderCostVectorized(p, inputSize, 3, f, phi, lambda, rho, beta, trainData(:, 1:10));
+    easyTheta = initializeParameters(3, inputSize);
+    numgrad = computeNumericalGradient(easyJ, easyTheta);
+    [~, myGrad] = easyJ(easyTheta);
     fprintf(1, 'Difference between myGrad and numGrad is %f\n', norm(myGrad - numgrad));
 end
 
