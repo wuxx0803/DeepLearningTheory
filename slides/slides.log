@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.18)  12 MAR 2013 18:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.18)  12 MAR 2013 19:03
 entering extended mode
  %&-line parsing enabled.
 **\nonstopmode \input{"/home/bramsundar/Devel/DeepLearningTheory/slides/slides.
@@ -795,52 +795,72 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [3
 
 ]
-<fig1.png, id=100, 1242.6425pt x 801.99625pt>
+<fig3.png, id=100, 177.66376pt x 177.66376pt>
+File: fig3.png Graphic file (type png)
+ <use fig3.png>
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
+ []
+
+<fig1.png, id=102, 219.82124pt x 219.82124pt>
 File: fig1.png Graphic file (type png)
  <use fig1.png>
-Overfull \hbox (21.05602pt too wide) in paragraph at lines 100--100
-[]|$[]$| 
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
  []
 
-<fig2.png, id=101, 1025.8325pt x 797.98125pt>
+<fig8.png, id=103, 172.645pt x 174.6525pt>
+File: fig8.png Graphic file (type png)
+ <use fig8.png>
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
+ []
+
+<fig2.png, id=104, 187.70125pt x 187.70125pt>
 File: fig2.png Graphic file (type png)
  <use fig2.png>
-Overfull \hbox (21.05602pt too wide) in paragraph at lines 100--100
-[]|$[]$| 
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
  []
 
-File: fig2.png Graphic file (type png)
-<use fig2.png>
-Overfull \hbox (21.05602pt too wide) in paragraph at lines 100--100
-[]|$[]$| 
- []
-
-<fig5.png, id=102, 1036.87375pt x 781.92125pt>
-File: fig5.png Graphic file (type png)
- <use fig5.png>
-Overfull \hbox (21.05602pt too wide) in paragraph at lines 100--100
-[]|$[]$| 
- []
-
-File: fig5.png Graphic file (type png)
-<use fig5.png>
-Overfull \hbox (21.05602pt too wide) in paragraph at lines 100--100
-[]|$[]$| 
- []
-
-<fig6.png, id=103, 1032.85875pt x 794.97pt>
+<fig6.png, id=105, 190.7125pt x 190.7125pt>
 File: fig6.png Graphic file (type png)
  <use fig6.png>
-Overfull \hbox (21.05602pt too wide) in paragraph at lines 100--100
-[]|$[]$| 
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
+ []
+
+<fig5.png, id=106, 190.7125pt x 190.7125pt>
+File: fig5.png Graphic file (type png)
+ <use fig5.png>
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
+ []
+
+<fig7.png, id=107, 205.76875pt x 205.76875pt>
+File: fig7.png Graphic file (type png)
+ <use fig7.png>
+Overfull \hbox (35.2824pt too wide) in paragraph at lines 157--157
+[]|$[]$
+ []
+
+
+Overfull \hbox (22.23175pt too wide) in paragraph at lines 157--157
+ [] 
+ []
+
+
+Overfull \vbox (8.49864pt too high) detected at line 157
  []
 
 [4
 
- </home/bramsundar/Devel/DeepLearningTheory/slides/fig1.png (PNG copy)> </home/
-bramsundar/Devel/DeepLearningTheory/slides/fig2.png (PNG copy)> </home/bramsund
-ar/Devel/DeepLearningTheory/slides/fig5.png (PNG copy)> </home/bramsundar/Devel
-/DeepLearningTheory/slides/fig6.png (PNG copy)>]
+ </home/bramsundar/Devel/DeepLearningTheory/slides/fig3.png> </home/bramsundar/
+Devel/DeepLearningTheory/slides/fig1.png> </home/bramsundar/Devel/DeepLearningT
+heory/slides/fig8.png> </home/bramsundar/Devel/DeepLearningTheory/slides/fig2.p
+ng> </home/bramsundar/Devel/DeepLearningTheory/slides/fig6.png> </home/bramsund
+ar/Devel/DeepLearningTheory/slides/fig5.png> </home/bramsundar/Devel/DeepLearni
+ngTheory/slides/fig7.png>]
 \tf@nav=\write5
 \openout5 = `slides.nav'.
 
@@ -858,28 +878,29 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 12604 strings out of 495061
- 221141 string characters out of 1182621
- 304307 words of memory out of 3000000
- 15437 multiletter control sequences out of 15000+50000
+ 12619 strings out of 495061
+ 221318 string characters out of 1182621
+ 308307 words of memory out of 3000000
+ 15449 multiletter control sequences out of 15000+50000
  12330 words of font info for 46 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  46i,16n,51p,406b,537s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmss12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmss8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss9.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb>
-Output written on slides.pdf (4 pages, 1214887 bytes).
+xlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmss10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmss12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss8.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on slides.pdf (4 pages, 341901 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
+ 189 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

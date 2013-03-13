@@ -63,36 +63,93 @@ regularizer, and $\phi$ is the sparsity function.
 \begin{frame}{Pictures}
 \begin{table}[h!]
 \centering
-\begin{tabular}{ | c | m{2.5cm} | m{2.5cm} | m{2.5cm}| }
+\begin{tabular}{ | c | m{2cm} | m{2cm} | m{2cm} | m{2cm}| }
 \hline
-Activation & $L^1$ & $L^2$ & $\KL$ \\ \hline
+Activation & None & $L^1$ & $L^2$ & $\KL$ \\ \hline
 Sigmoid
 &
+% VERIFIED
 \begin{minipage}{.3\textwidth}
-\includegraphics[width=25mm, height=25mm]{fig1}
+\includegraphics[width=20mm, height=20mm]{fig3}
 \end{minipage}
+\tiny
+Train: $94.45\%$, Test: $82.8\%$ 
 & 
+% VERIFIED
 \begin{minipage}{.3\textwidth}
-\includegraphics[width=25mm, height=25mm]{fig2}
+\includegraphics[width=20mm, height=20mm]{fig1}
 \end{minipage}
+\tiny
+Train: $93.9\%$, Test: $83.2\%$ 
 & 
+% VERIFIED
 \begin{minipage}{.3\textwidth}
-\includegraphics[width=25mm, height=25mm]{fig2}
+\includegraphics[width=20mm, height=20mm]{fig8}
 \end{minipage}
+\tiny
+Train: $94.65\%$, Test: $82.85\%$ 
+& 
+% VERIFIED
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=20mm, height=20mm]{fig2}
+\end{minipage}
+\tiny
+Train: $94.15\%$, Test: $83.55\%$ 
 \\ \hline
 Identity
 &
+% VERIFIED
 \begin{minipage}{.3\textwidth}
-\includegraphics[width=25mm, height=25mm]{fig5}
+\includegraphics[width=20mm, height=20mm]{fig6}
 \end{minipage}
+\tiny
+Train: $99.65\%$, Test: $80.1\%$ 
 & 
+% VERIFIED
 \begin{minipage}{.3\textwidth}
-\includegraphics[width=25mm, height=25mm]{fig5}
+\includegraphics[width=20mm, height=20mm]{fig5}
 \end{minipage}
+\tiny
+Train: $99.7\%$, Test: $79.6\%$ 
 & 
+%\begin{minipage}{.3\textwidth}
+%\includegraphics[width=20mm, height=20mm]{fig5}
+%\end{minipage}
+%\tiny
+%Train: $23$, Test: $23$ 
+& 
+%\begin{minipage}{.3\textwidth}
+%\includegraphics[width=20mm, height=20mm]{fig6}
+%\end{minipage}
+%\tiny
+%Train: $23$, Test: $23$ 
+\\ \hline
+Sine
+&
+% VERIFIED
 \begin{minipage}{.3\textwidth}
-\includegraphics[width=25mm, height=25mm]{fig6}
+\includegraphics[width=20mm, height=20mm]{fig7}
 \end{minipage}
+\tiny
+Train: $99.7\%$, Test: $81.95\%$ 
+& 
+%\begin{minipage}{.3\textwidth}
+%\includegraphics[width=20mm, height=20mm]{fig5}
+%\end{minipage}
+%\tiny
+%Train: $23$, Test: $23$ 
+& 
+%\begin{minipage}{.3\textwidth}
+%\includegraphics[width=20mm, height=20mm]{fig5}
+%\end{minipage}
+%\tiny
+%Train: $23$, Test: $23$ 
+& 
+%\begin{minipage}{.3\textwidth}
+%\includegraphics[width=20mm, height=20mm]{fig6}
+%\end{minipage}
+%\tiny
+%Train: $23$, Test: $23$ 
 \\ \hline
 \end{tabular}
 %\caption{my.Lboro Analysis}\label{tbl:myLboro}
