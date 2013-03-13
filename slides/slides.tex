@@ -1,5 +1,6 @@
 % small.tex
 \documentclass{beamer}
+\usepackage{dcolumn}
 
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\ra}{\rightarrow}
@@ -15,6 +16,7 @@
 \newcommand{\dr}{\delta^{(3)}}
 \newcommand{\dt}{\delta^{(2)}}
 \newcommand{\xii}{x^{(i)}}
+\DeclareMathOperator{\KL}{KL}
 \newcommand{\pd}[2]{\ensuremath{\cfrac{\partial #1}{\partial #2}}}
 
 \title[]{Effects of Sparsity and the Activation Function on Sparse Autoencoders}
@@ -57,8 +59,44 @@ $\ell:\RR^n\times\RR^n\ra\RR$ is a loss function. The function $\psi$ is a
 regularizer, and $\phi$ is the sparsity function.
 \normalsize
 \end{frame}
+\footnotesize
 \begin{frame}{Pictures}
-
+\begin{table}[h!]
+\centering
+\begin{tabular}{ | c | m{2.5cm} | m{2.5cm} | m{2.5cm}| }
+\hline
+Activation & $L^1$ & $L^2$ & $\KL$ \\ \hline
+Sigmoid
+&
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=25mm, height=25mm]{fig1}
+\end{minipage}
+& 
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=25mm, height=25mm]{fig2}
+\end{minipage}
+& 
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=25mm, height=25mm]{fig2}
+\end{minipage}
+\\ \hline
+Identity
+&
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=25mm, height=25mm]{fig5}
+\end{minipage}
+& 
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=25mm, height=25mm]{fig5}
+\end{minipage}
+& 
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=25mm, height=25mm]{fig6}
+\end{minipage}
+\\ \hline
+\end{tabular}
+%\caption{my.Lboro Analysis}\label{tbl:myLboro}
+\end{table}
 \end{frame}
 
 \end{document}
