@@ -17,10 +17,16 @@
 \newcommand{\xii}{x^{(i)}}
 \newcommand{\pd}[2]{\ensuremath{\cfrac{\partial #1}{\partial #2}}}
 
+\title[]{Effects of Sparsity and the Activation Function on Sparse Autoencoders}
+\author[]{Justin Johnson\quad Bharath Ramsundar}
+\date{}
 \usetheme{default}
 \begin{document}
+\begin{frame}
+\maketitle
+\end{frame}
 
-\begin{frame}{Effects of Sparsity and Regularization Choice on Sparse Autoencoders}
+\begin{frame}{Sparse Autoencoders}
 
 Autoencoders are neural networks that try to learn the identity function.
 Sparsity constraints force the learned representation to be nontrivial.
@@ -46,8 +52,9 @@ Given training examples $x^{(1)},\ldots,x^{(m)}\in\RR^n$ the objective function 
 \[J(W,b)=\frac1m\sum_{i=1}^m\ell(h_{W,b}(\xii),\xii)+\lambda\psi(W,b)+\beta\sum_{j=1}^p\phi(\hat\rho_j)\]
 where 
 \[\hat\rho_j=\frac1m\sum_{j=1}^mf\left((\Wo_j)^T\xii+\bo_j\right)\] is 
-the average activation of the $j$th hidden unit over the training set and $\ell:\RR^n\times\RR^n\ra\RR$ is a loss function. The function
-$\psi$ is a regularizer.
+the average activation of the $j$th hidden unit and
+$\ell:\RR^n\times\RR^n\ra\RR$ is a loss function. The function $\psi$ is a
+regularizer, and $\phi$ is the sparsity function.
 \normalsize
 \end{frame}
 \begin{frame}{Pictures}
