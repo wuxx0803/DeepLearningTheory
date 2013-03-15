@@ -75,33 +75,49 @@ roughly correspond to local object parts.
 
 \vspace{-1.1pc}
 \section{Equivalence with PCA}
-An autoencoder that does not include the regularization or sparsity terms learns a feature
-representation that is closely related to the principal components of the training data
-\cite{bourlard1988auto}. We implemented this type of autoencoder on the MNIST dataset and
-also ran principal component analysis on the same dataset; the learned features can be seen
-in Figure~\ref{fig:features}. The learned features appear to be qualitatively similar.
+An autoencoder that does not include the regularization or sparsity terms learns
+a feature representation that is closely related to the principal components of
+the training data \cite{bourlard1988auto}. We implemented this type of
+autoencoder on the MNIST dataset and also ran principal component analysis on
+the same dataset; the learned features can be seen in Figure~\ref{fig:features}.
+The learned features appear to be qualitatively similar.
 
-This equivalence between ``vanilla'' autoencoders and principal component analysis suggests
-that the recent success of autoencoders is due to the additional constraints placed upon
-their parameters. This motivates a more in-depth analysis of the sparsity constraint.
+This equivalence between ``vanilla'' autoencoders and principal component
+analysis suggests that the recent success of autoencoders is due to the
+additional constraints placed upon their parameters. This motivates a more
+in-depth analysis of the sparsity constraint.
+
+\vspace{-1.1pc}
+\section{Universal Approximation}
+Neural networks with one hidden layer are capable of uniformly approximating
+arbitrary continuous functions \cite{cybenko1989approximation}. This result,
+which follows from a form of generalized fourier analysis, implies that neural
+nets are capable of learning arbitrary classifiers. Note though, that
+autoencoders are distinct from general neural networks, since autoencoders
+attempt only to learn the identity. However, the universal approximation result
+motivates the belief that autencoders can learn nontrivial, data-dependent forms
+of the identity.
 
 \vspace{-1pc}
 \section{Sparse Linear Autoencoders}
-We next considered a sparse linearized autoencoder where the transfer function is simply the identity
-function. The objective function for this autoencoder is the sum of the $\ell^2$ reconstruction error,
-an $\ell^2$ regularization term on the network weights, and an $\ell^2$ sparsity constraint of the form
-$\|\rho-\hat\rho\|_2^2$ where as above $\hat\rho_j$ is the mean activation of the $j$th hidden unit
-on the training set. The learned features for this autoencoder is shown in Figure~\ref{fig:features}.
+We next considered a sparse linearized autoencoder where the transfer function
+is simply the identity function. The objective function for this autoencoder is
+the sum of the $\ell^2$ reconstruction error, an $\ell^2$ regularization term on
+the network weights, and an $\ell^2$ sparsity constraint of the form
+$\|\rho-\hat\rho\|_2^2$ where as above $\hat\rho_j$ is the mean activation of
+the $j$th hidden unit on the training set. The learned features for this
+autoencoder is shown in Figure~\ref{fig:features}.
 
 \section{Discussion}
-Our experimentation so far has led us to focus on the sparsity constraint of the autoencoder.
-For the remainder of the term we will consider other variants on this constraint both on
-nonlinear and linearized networks. In particular, we will experiment with $\ell^1$ and $\ell^2$
-sparsity constraints on the nonlinear network and an $\ell^1$ sparsity constraint on the
-linearized network. Depending on the results of these experiments, we will attempt to understand
-the theoretical implications of these sorts of constraints. In addition to the linearized
-autoencoder, we would also like to experiment with networks whose transfer function is a Taylor
-approximation to the sigmoid function.
+Our experimentation so far has led us to focus on the sparsity constraint of the
+autoencoder.  For the remainder of the term we will consider other variants on
+this constraint both on nonlinear and linearized networks. In particular, we
+will experiment with $\ell^1$ and $\ell^2$ sparsity constraints on the nonlinear
+network and an $\ell^1$ sparsity constraint on the linearized network. Depending
+on the results of these experiments, we will attempt to understand the
+theoretical implications of these sorts of constraints. In addition to the
+linearized autoencoder, we would also like to experiment with networks whose
+transfer function is a Taylor approximation to the sigmoid function.
   
 \begin{figure*}
   \centering
