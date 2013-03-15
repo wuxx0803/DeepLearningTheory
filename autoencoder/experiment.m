@@ -8,7 +8,8 @@ testLabels = ytest;
 numClasses = max(trainLabels) - min(trainLabels) + 1;
 
 inputSize = size(X, 1);
-numTrainingExamples = size(X, 2);
+numTrainingExamples = size(trainData, 2);
+numTestExamples = size(testData, 2);
 
 % Draw examples from uniform random distribution
 % data = rand(inputSize, numTrainingExamples);
@@ -19,29 +20,31 @@ numTrainingExamples = size(X, 2);
 % data = randn(numTrainingExamples, 2) * R;
 % data = data';
 
-checkGradient = true;
+checkGradient = false;
 hiddenSize = 200;
-lambda = 3e-3;
-beta = 3;
-rho = 0.1;
-f = @sigmoid;
-phi = @phiL2;
+% lambda = 3e-3;
+lambda = 0;
+beta = 10;
+rho = 0.05;
+f = @sineTransfer;
+phi = @phiNone;
 softmaxLambda = 1e-4;
 
 % Lets do PCA
 % Mean subtraction:
-% Xc = X - repmat(mean(X, 2), 1, numTrainingExamples);
+% b = mean(trainData, 2);
+% Xc = X - repmat(b, 1, numTrainingExamples);
 % [U, S, V] = svd(Xc, 0);
 % U = U(:, 1:hiddenSize);
 % display_network(U);
 % pause;
 
 % Define the objective function
-J = @(p) sparseAutoencoderCostVectorized(p, inputSize, hiddenSize, f, phi, lambda, rho, beta, trainData);
+J = @(p) generalSparseAutoencoderCost(p, inputSize, hiddenSize, f, phi, lambda, rho, beta, trainData);
 
 % Do numeric gradient checking
 if checkGradient
-    easyJ = @(p) sparseAutoencoderCostVectorized(p, inputSize, 3, f, phi, lambda, rho, beta, trainData(:, 1:10));
+    easyJ = @(p) generalSparseAutoencoderCost(p, inputSize, 3, f, phi, lambda, rho, beta, trainData(:, 1:10));
     easyTheta = initializeParameters(3, inputSize);
     numgrad = computeNumericalGradient(easyJ, easyTheta);
     [~, myGrad] = easyJ(easyTheta);
@@ -61,8 +64,10 @@ options.display = 'on';
 display_network(W1');
 
 % Now train a softmax classifier
-trainFeatures = feedForwardAutoencoder(theta, hiddenSize, inputSize, f, trainData);
-testFeatures = feedForwardAutoencoder(theta, hiddenSize, inputSize, f, testData);
+trainFeatures = generalFeedForwardAutoencoder(opttheta, hiddenSize, inputSize, f, trainData);
+testFeatures = generalFeedForwardAutoencoder(opttheta, hiddenSize, inputSize, f, testData);
+% trainFeatures = U' * (trainData - repmat(b, 1, numTrainingExamples));
+% testFeatures = U' * (testData - repmat(b, 1, numTestExamples));
 softmaxModel = softmaxTrain(hiddenSize, numClasses, softmaxLambda, trainFeatures, trainLabels);
 % trainFeatures = trainData;
 % testFeatures = testData;

@@ -89,3 +89,252 @@ phi = @phiL2;
 softmaxLambda = 1e-4;
 Training accuracy: 1893 / 2000 = 94.650000%
 Testing accuracy: 1657 / 2000 = 82.850000%
+
+
+-------------------------------------------
+Everything above this line is garbage! Training / testing features were
+generated using the initial random network weights instead of the weights
+computed from the optimization ... D'oh!
+
+fig9.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiKL;
+softmaxLambda = 1e-4;
+Training accuracy: 1995 / 2000 = 99.750000%
+Testing accuracy: 1806 / 2000 = 90.300000%
+
+fig10.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1975 / 2000 = 98.750000%
+Testing accuracy: 1698 / 2000 = 84.900000%
+
+fig11.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @identity;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1992 / 2000 = 99.600000%
+Testing accuracy: 1597 / 2000 = 79.850000%
+
+fig12.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1994 / 2000 = 99.700000%
+Testing accuracy: 1606 / 2000 = 80.300000%
+
+fig13.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @arctan;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1963 / 2000 = 98.150000%
+Testing accuracy: 1638 / 2000 = 81.900000%
+
+fig14.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1770 / 2000 = 88.500000%
+Testing accuracy: 1609 / 2000 = 80.450000%
+
+fig15.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiL2;
+softmaxLambda = 1e-4;
+Training accuracy: 1997 / 2000 = 99.850000%
+Testing accuracy: 1826 / 2000 = 91.300000%
+
+fig16.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @identity;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 2000 / 2000 = 100.000000%
+Testing accuracy: 1657 / 2000 = 82.850000%
+
+fig17.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @identity;
+phi = @phiL2;
+softmaxLambda = 1e-4;
+Training accuracy: 2000 / 2000 = 100.000000%
+Testing accuracy: 1666 / 2000 = 83.300000%
+
+fig18.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 2000 / 2000 = 100.000000%
+Testing accuracy: 1638 / 2000 = 81.900000%
+
+fig19.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiL2;
+softmaxLambda = 1e-4;
+Training accuracy: 2000 / 2000 = 100.000000%
+Testing accuracy: 1643 / 2000 = 82.150000%
+
+----
+Results for arctan above here are buggy
+
+fig20.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @arctan;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1978 / 2000 = 98.900000%
+Testing accuracy: 1704 / 2000 = 85.200000%
+
+fig21.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @arctan;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1511 / 2000 = 75.550000%
+Testing accuracy: 1349 / 2000 = 67.450000%
+
+fig22.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @arctan;
+phi = @phiL2;
+softmaxLambda = 1e-4;
+Training accuracy: 1995 / 2000 = 99.750000%
+Testing accuracy: 1809 / 2000 = 90.450000%
+
+fig23.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @arctan;
+phi = @phiKL;
+softmaxLambda = 1e-4;
+Training accuracy: 1990 / 2000 = 99.500000%
+Testing accuracy: 1800 / 2000 = 90.000000%
+
+fig24.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 10;
+rho = 0.1;
+f = @sigmoid;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1760 / 2000 = 88.000000%
+Testing accuracy: 1638 / 2000 = 81.900000%
+
+fig25.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 10;
+rho = 0.05;
+f = @sigmoid;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1693 / 2000 = 84.650000%
+Testing accuracy: 1522 / 2000 = 76.100000%
+
+fig26.png
+PCA feature transform
+Training accuracy: 2000 / 2000 = 100.000000%
+Testing accuracy: 1646 / 2000 = 82.300000%
+
+fig27.png
+hiddenSize = 200;
+% lambda = 3e-3;
+lambda = 0;
+beta = 10;
+rho = 0.05;
+f = @sigmoid;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1999 / 2000 = 99.950000%
+Testing accuracy: 1644 / 2000 = 82.200000%
+
+fig28.png
+hiddenSize = 200;
+% lambda = 3e-3;
+lambda = 0;
+beta = 10;
+rho = 0.05;
+f = @identity;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1999 / 2000 = 99.950000%
+Testing accuracy: 1640 / 2000 = 82.000000%
+
+fig29.png
+checkGradient = false;
+hiddenSize = 200;
+% lambda = 3e-3;
+lambda = 0;
+beta = 10;
+rho = 0.05;
+f = @arctan;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1810 / 2000 = 90.500000%
+Testing accuracy: 1601 / 2000 = 80.050000%
+Maybe this one didn't run to convergence?
+
+fig30.png
+hiddenSize = 200;
+% lambda = 3e-3;
+lambda = 0;
+beta = 10;
+rho = 0.05;
+f = @sineTransfer;
+phi = @phiNone;
+softmaxLambda = 1e-4;

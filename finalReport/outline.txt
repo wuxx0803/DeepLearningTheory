@@ -1,0 +1,9 @@
+Good news: neural networks are universal approximators
+Good news: neural networks converge in the limit
+Bad news: optimization is NP hard in general
+Good news: we don't care about actually learning the identity function, but instead about the intermediate representation
+Bad news: for any activation function, features learned by autoencoder are just PCA
+Hypothesis: the ability of an autoencoder to actually learn a useful representation comes from the sparsity term of the objective
+Question: what happens if we try different types of sparsity penalties?
+Question: a non-sparse autoencoder learns PCA for any activation function, so can a sparse autoencoder learn a useful representation for other activation functions?
+Experimental results: sigmoid and atan activation functions with KL and L2 sparsity perform significantly better than either PCA features or softmax on raw pixels. L1 sparsity is crap; maybe we need better parameter tuning? Identity and sine activations are crap; no better than softmax on raw pixels

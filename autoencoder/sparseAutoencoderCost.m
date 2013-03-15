@@ -1,17 +1,13 @@
-function [cost,grad] = sparseAutoencoderCostVectorized(theta, visibleSize, hiddenSize, f, phi, ...
-                                             lambda, rho, beta, data)
-% Parameters:
-% theta - weights for the neural net, arranged as a long vector
-% visibleSize - Number of input units
-% hiddenSize - Number of hidden units
-% f - transfer function; must have the form [f(z), f'(z)] = f(z) and
-%              operate componentwise on vectors
-% phi - Sparsity penalty function; must have the form 
-%       [phi(rho_hat, rho), phi'(rho_hat, rho)] = phi(rho_hat, rho)
-% lambda - Weight decay parameters
-% rho - Desired activation for the hidden units
-% beta - Weight of sparsity penalty term
-% data - Input data where data(:, i) is the ith training example
+function [cost,grad] = sparseAutoencoderCost(theta, visibleSize, hiddenSize, ...
+                                             lambda, sparsityParam, beta, data)
+
+% visibleSize: the number of input units (probably 64) 
+% hiddenSize: the number of hidden units (probably 25) 
+% lambda: weight decay parameter
+% sparsityParam: The desired average activation for the hidden units (denoted in the lecture
+%                           notes by the greek alphabet rho, which looks like a lower-case "p").
+% beta: weight of sparsity penalty term
+% data: Our 64x10000 matrix containing the training data.  So, data(:,i) is the i-th training example. 
   
 % The input theta is a vector (because minFunc expects the parameters to be a vector). 
 % We first convert theta to the (W1, W2, b1, b2) matrix/vector format, so that this 
@@ -47,25 +43,20 @@ b2grad = zeros(size(b2));
 % 
 
 numExamples = size(data, 2);
+rho = sparsityParam;
 
 % Forward propogation for all examples
-z2 = W1 * data + repmat(b1, 1, numExamples);
-a2 = f(W1 * data + repmat(b1, 1, numExamples));
-z3 = W2 * a2 + repmat(b2, 1, numExamples);
-a3 = f(z3);
+a2 = sigmoid(W1 * data + repmat(b1, 1, numExamples));
+a3 = sigmoid(W2 * a2 + repmat(b2, 1, numExamples));
 
 % Compute average activations of all hidden neurons
 rhoHat = mean(a2, 2);
-% sparseDelta = beta * ((1 - rho) ./ (1 - rhoHat) - rho ./ rhoHat);
-[sparseCost, phiPrime] = phi(rhoHat, rho);
-sparseDelta = beta * phiPrime;
+sparseDelta = beta * ((1 - rho) ./ (1 - rhoHat) - rho ./ rhoHat);
 
 % Backward propogation for all examples
 diff = data - a3;
-[~, fp] = f(z3);
-delta3 = -diff .* fp;
-[~, fp] = f(z2);
-delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* fp;
+delta3 = -diff .* a3 .* (1 - a3);
+delta2 = (W2' * delta3 + repmat(sparseDelta, 1, numExamples)) .* a2 .* (1 - a2);
 
 % Square difference term for cost and gradient
 cost = trace(diff * diff') / (2 * numExamples);
@@ -80,8 +71,8 @@ W1grad = W1grad + lambda * W1;
 W2grad = W2grad + lambda * W2;
 
 % Add sparsity term to cost
-% sparseCost = sum(rho * log(rho ./ rhoHat) + (1 - rho) * log((1 - rho) ./ (1 - rhoHat)));
-cost = cost + beta * sum(sparseCost);
+sparseCost = sum(rho * log(rho ./ rhoHat) + (1 - rho) * log((1 - rho) ./ (1 - rhoHat)));
+cost = cost + beta * sparseCost;
 
 %-------------------------------------------------------------------
 % After computing the cost and gradient, we will convert the gradients back

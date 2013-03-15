@@ -1,12 +1,13 @@
 # Fdb version 3
-["bibtex finalReport"] 1363049008 "finalReport.aux" "finalReport.bbl" "finalReport" 1363049070
+["bibtex finalReport"] 1363049008 "finalReport.aux" "finalReport.bbl" "finalReport" 1363375492
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "finalReport.aux" 1363049070 1288 8c261a472dfac3be89f8bb4cad7d9bc2 ""
   "finalReport.bcf" 0 -1 0 ""
   "refs.bib" 1363044161 3107 2d57f0f22c7395760166a32657cb8d15 ""
   (generated)
   "finalReport.bbl"
-["pdflatex"] 1363049069 "finalReport.tex" "finalReport.pdf" "finalReport" 1363049070
+  "finalReport.blg"
+["pdflatex"] 1363049069 "finalReport.tex" "finalReport.pdf" "finalReport" 1363375492
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -89,6 +90,7 @@
   "/usr/local/texlive/2012/texmf/web2c/texmf.cnf" 1336865692 31299 729e216d9b945005c0d4b079c0500bc9 ""
   "finalReport.aux" 1363049070 1288 8c261a472dfac3be89f8bb4cad7d9bc2 ""
   "finalReport.bbl" 1363049009 1633 37b8e2729772184df222205712f3077b "bibtex finalReport"
+  "finalReport.pdf" 1363049070 672008 01048c7a5fa1c227907b9a16b4874c1c "pdflatex"
   "finalReport.tex" 1363049067 9937 5486d43c587aa1d607cdb4795f72ac11 ""
   "linearnn.png" 1363043175 95794 54f49bb224d3e02c7f5c581bc67d30f6 ""
   "nonlinearnn.png" 1363043175 263975 ca9a02d0a2e929ffd0fa9f32335b2c94 ""
