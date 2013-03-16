@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAR 2013 18:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAR 2013 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -169,6 +169,11 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box28
 \rot@mess@toks=\toks23
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box29
+\fn@width=\dimen117
+)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -186,42 +191,42 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count101
 \Gm@cntv=\count102
 \c@Gm@tempcnt=\count103
-\Gm@bindingoffset=\dimen117
-\Gm@wd@mp=\dimen118
-\Gm@odd@mp=\dimen119
-\Gm@even@mp=\dimen120
-\Gm@layoutwidth=\dimen121
-\Gm@layoutheight=\dimen122
-\Gm@layouthoffset=\dimen123
-\Gm@layoutvoffset=\dimen124
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks24
 )
 (./finalReport.aux)
 \openout1 = `finalReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
-\scratchdimen=\dimen125
-\scratchbox=\box29
+\scratchdimen=\dimen126
+\scratchbox=\box30
 \nofMPsegments=\count105
 \nofMParguments=\count106
 \everyMPshowfont=\toks25
 \MPscratchCnt=\count107
-\MPscratchDim=\dimen126
+\MPscratchDim=\dimen127
 \MPnumerator=\count108
 \makeMPintoPDFobject=\count109
 \everyMPtoPDFconversion=\toks26
@@ -277,15 +282,15 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(62.59596pt, 489.10307pt, 62.59596pt)
-* v-part:(T,H,B)=(62.59596pt, 669.77806pt, 62.59596pt)
+* h-part:(L,W,R)=(54.06006pt, 506.17488pt, 54.06006pt)
+* v-part:(T,H,B)=(54.06006pt, 686.84987pt, 54.06006pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=489.10307pt
-* \textheight=669.77806pt
-* \oddsidemargin=-9.67403pt
-* \evensidemargin=-9.67403pt
-* \topmargin=-9.67403pt
+* \textwidth=506.17488pt
+* \textheight=686.84987pt
+* \oddsidemargin=-18.20993pt
+* \evensidemargin=-18.20993pt
+* \topmargin=-18.20993pt
 * \headheight=0.0pt
 * \headsep=0.0pt
 * \topskip=10.0pt
@@ -303,179 +308,169 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+)
+Overfull \hbox (1.62962pt too wide) detected at line 74
+\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W; b\OT1/cmr/m/n/10 ) = [] 
+[] \OML/cmm/m/it/10 `\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; x[]\OT1/cmr/m/n/10 ) + \OML
+/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W; b\OT1/cmr/m/n/10 ) + \OML
+/cmm/m/it/10 ^^L [] ^^^\OT1/cmr/m/n/10 ([])
+ []
+
+[1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<aeFigs/sigmoid.png, id=17, 240.9pt x 239.89626pt>
+<aeFigs/sigmoid.png, id=15, 240.9pt x 239.89626pt>
 File: aeFigs/sigmoid.png Graphic file (type png)
  <use aeFigs/sigmoid.png>
-Package pdftex.def Info: aeFigs/sigmoid.png used on input line 143.
-(pdftex.def)             Requested size: 73.36247pt x 73.0566pt.
+Package pdftex.def Info: aeFigs/sigmoid.png used on input line 159.
+(pdftex.def)             Requested size: 75.92314pt x 75.60431pt.
 
-<aeFigs/atan.png, id=19, 224.84pt x 223.83624pt>
+<aeFigs/atan.png, id=17, 224.84pt x 223.83624pt>
 File: aeFigs/atan.png Graphic file (type png)
  <use aeFigs/atan.png>
-Package pdftex.def Info: aeFigs/atan.png used on input line 144.
-(pdftex.def)             Requested size: 73.36247pt x 73.0328pt.
+Package pdftex.def Info: aeFigs/atan.png used on input line 160.
+(pdftex.def)             Requested size: 75.92314pt x 75.58415pt.
 
-<aeFigs/id.png, id=20, 220.825pt x 221.82875pt>
+<aeFigs/id.png, id=18, 220.825pt x 221.82875pt>
 File: aeFigs/id.png Graphic file (type png)
  <use aeFigs/id.png>
-Package pdftex.def Info: aeFigs/id.png used on input line 145.
-(pdftex.def)             Requested size: 73.36247pt x 73.6945pt.
+Package pdftex.def Info: aeFigs/id.png used on input line 161.
+(pdftex.def)             Requested size: 75.92314pt x 76.26697pt.
 
-<aeFigs/sin.png, id=21, 236.885pt x 238.8925pt>
+<aeFigs/sin.png, id=19, 237.88875pt x 235.88126pt>
 File: aeFigs/sin.png Graphic file (type png)
  <use aeFigs/sin.png>
-Package pdftex.def Info: aeFigs/sin.png used on input line 146.
-(pdftex.def)             Requested size: 73.36247pt x 73.983pt.
+Package pdftex.def Info: aeFigs/sin.png used on input line 162.
+(pdftex.def)             Requested size: 75.92314pt x 75.28198pt.
 
-<aeFigs/pca.png, id=22, 222.8325pt x 223.83624pt>
+<aeFigs/pca.png, id=20, 222.8325pt x 223.83624pt>
 File: aeFigs/pca.png Graphic file (type png)
  <use aeFigs/pca.png>
-Package pdftex.def Info: aeFigs/pca.png used on input line 147.
-(pdftex.def)             Requested size: 73.36247pt x 73.69199pt.
+Package pdftex.def Info: aeFigs/pca.png used on input line 163.
+(pdftex.def)             Requested size: 75.92314pt x 76.26384pt.
 
-Overfull \hbox (24.67174pt too wide) in paragraph at lines 139--157
+Overfull \hbox (22.96394pt too wide) in paragraph at lines 155--173
  [][] 
  []
 
 
-Overfull \vbox (5.52562pt too high) detected at line 176
+Overfull \vbox (5.52562pt too high) detected at line 194
  []
 
-<saeFigs/sigmoidNone.png, id=23, 238.8925pt x 236.885pt>
+<saeFigs/sigmoidNone.png, id=21, 238.8925pt x 236.885pt>
 File: saeFigs/sigmoidNone.png Graphic file (type png)
 
 <use saeFigs/sigmoidNone.png>
-Package pdftex.def Info: saeFigs/sigmoidNone.png used on input line 178.
-(pdftex.def)             Requested size: 73.36247pt x 72.7432pt.
+Package pdftex.def Info: saeFigs/sigmoidNone.png used on input line 196.
+(pdftex.def)             Requested size: 75.92314pt x 75.28424pt.
 
-<saeFigs/atanNone.png, id=24, 241.90375pt x 239.89626pt>
+<saeFigs/atanNone.png, id=22, 241.90375pt x 239.89626pt>
 File: saeFigs/atanNone.png Graphic file (type png)
 
 <use saeFigs/atanNone.png>
-Package pdftex.def Info: saeFigs/atanNone.png used on input line 179.
-(pdftex.def)             Requested size: 73.36247pt x 72.75278pt.
+Package pdftex.def Info: saeFigs/atanNone.png used on input line 197.
+(pdftex.def)             Requested size: 75.92314pt x 75.29317pt.
 
-<saeFigs/idNone.png, id=25, 231.86626pt x 229.85875pt>
+<saeFigs/idNone.png, id=23, 231.86626pt x 229.85875pt>
 File: saeFigs/idNone.png Graphic file (type png)
 
 <use saeFigs/idNone.png>
-Package pdftex.def Info: saeFigs/idNone.png used on input line 180.
-(pdftex.def)             Requested size: 73.36247pt x 72.72856pt.
-
-<saeFigs/sineNone.png, id=26, 226.8475pt x 225.84375pt>
+Package pdftex.def Info: saeFigs/idNone.png used on input line 198.
+(pdftex.def)             Requested size: 75.92314pt x 75.26437pt.
+ <saeFigs/sineNone.png, id=24, 240.9pt x 239.89626pt>
 File: saeFigs/sineNone.png Graphic file (type png)
 
 <use saeFigs/sineNone.png>
-Package pdftex.def Info: saeFigs/sineNone.png used on input line 181.
-(pdftex.def)             Requested size: 73.36247pt x 73.0365pt.
+Package pdftex.def Info: saeFigs/sineNone.png used on input line 199.
+(pdftex.def)             Requested size: 75.92314pt x 75.60431pt.
 
-<saeFigs/sigmoidL1.png, id=27, 237.88875pt x 236.885pt>
+<saeFigs/sigmoidL1.png, id=25, 237.88875pt x 236.885pt>
 File: saeFigs/sigmoidL1.png Graphic file (type png)
 
 <use saeFigs/sigmoidL1.png>
-Package pdftex.def Info: saeFigs/sigmoidL1.png used on input line 183.
-(pdftex.def)             Requested size: 73.36247pt x 73.05405pt.
+Package pdftex.def Info: saeFigs/sigmoidL1.png used on input line 201.
+(pdftex.def)             Requested size: 75.92314pt x 75.60233pt.
 
-<saeFigs/atanL1.png, id=28, 239.89626pt x 237.88875pt>
+<saeFigs/atanL1.png, id=26, 239.89626pt x 237.88875pt>
 File: saeFigs/atanL1.png Graphic file (type png)
 
 <use saeFigs/atanL1.png>
-Package pdftex.def Info: saeFigs/atanL1.png used on input line 184.
-(pdftex.def)             Requested size: 73.36247pt x 72.74652pt.
- <saeFigs/idL1.png, id=29, 234.8775pt x 234.8775pt>
+Package pdftex.def Info: saeFigs/atanL1.png used on input line 202.
+(pdftex.def)             Requested size: 75.92314pt x 75.28745pt.
+ <saeFigs/idL1.png, id=27, 234.8775pt x 234.8775pt>
 File: saeFigs/idL1.png Graphic file (type png)
 
 <use saeFigs/idL1.png>
-Package pdftex.def Info: saeFigs/idL1.png used on input line 185.
-(pdftex.def)             Requested size: 73.36247pt x 73.3596pt.
- <saeFigs/sineL1.png, id=30, 241.90375pt x 239.89626pt>
+Package pdftex.def Info: saeFigs/idL1.png used on input line 203.
+(pdftex.def)             Requested size: 75.92314pt x 75.92212pt.
+ <saeFigs/sineL1.png, id=28, 232.87pt x 231.86626pt>
 File: saeFigs/sineL1.png Graphic file (type png)
 
 <use saeFigs/sineL1.png>
-Package pdftex.def Info: saeFigs/sineL1.png used on input line 186.
-(pdftex.def)             Requested size: 73.36247pt x 72.75278pt.
+Package pdftex.def Info: saeFigs/sineL1.png used on input line 204.
+(pdftex.def)             Requested size: 75.92314pt x 75.5962pt.
 
-<saeFigs/sigmoidL2.png, id=31, 229.85875pt x 229.85875pt>
+<saeFigs/sigmoidL2.png, id=29, 229.85875pt x 229.85875pt>
 File: saeFigs/sigmoidL2.png Graphic file (type png)
 
 <use saeFigs/sigmoidL2.png>
-Package pdftex.def Info: saeFigs/sigmoidL2.png used on input line 188.
-(pdftex.def)             Requested size: 73.36247pt x 73.36339pt.
+Package pdftex.def Info: saeFigs/sigmoidL2.png used on input line 206.
+(pdftex.def)             Requested size: 75.92314pt x 75.92375pt.
 
-<saeFigs/atanL2.png, id=32, 229.85875pt x 229.85875pt>
+<saeFigs/atanL2.png, id=30, 229.85875pt x 229.85875pt>
 File: saeFigs/atanL2.png Graphic file (type png)
 
 <use saeFigs/atanL2.png>
-Package pdftex.def Info: saeFigs/atanL2.png used on input line 189.
-(pdftex.def)             Requested size: 73.36247pt x 73.36339pt.
- <saeFigs/idL2.png, id=33, 226.8475pt x 227.85126pt>
+Package pdftex.def Info: saeFigs/atanL2.png used on input line 207.
+(pdftex.def)             Requested size: 75.92314pt x 75.92375pt.
+ <saeFigs/idL2.png, id=31, 226.8475pt x 227.85126pt>
 File: saeFigs/idL2.png Graphic file (type png)
 
 <use saeFigs/idL2.png>
-Package pdftex.def Info: saeFigs/idL2.png used on input line 190.
-(pdftex.def)             Requested size: 73.36247pt x 73.68571pt.
- <saeFigs/sineL2.png, id=34, 241.90375pt x 239.89626pt>
+Package pdftex.def Info: saeFigs/idL2.png used on input line 208.
+(pdftex.def)             Requested size: 75.92314pt x 76.2585pt.
+ <saeFigs/sineL2.png, id=32, 239.89626pt x 238.8925pt>
 File: saeFigs/sineL2.png Graphic file (type png)
 
 <use saeFigs/sineL2.png>
-Package pdftex.def Info: saeFigs/sineL2.png used on input line 191.
-(pdftex.def)             Requested size: 73.36247pt x 72.75278pt.
+Package pdftex.def Info: saeFigs/sineL2.png used on input line 209.
+(pdftex.def)             Requested size: 75.92314pt x 75.60512pt.
 
-<saeFigs/sigmoidKL.png, id=35, 233.87375pt x 233.87375pt>
+<saeFigs/sigmoidKL.png, id=33, 233.87375pt x 233.87375pt>
 File: saeFigs/sigmoidKL.png Graphic file (type png)
 
 <use saeFigs/sigmoidKL.png>
-Package pdftex.def Info: saeFigs/sigmoidKL.png used on input line 193.
-(pdftex.def)             Requested size: 73.36247pt x 73.36371pt.
+Package pdftex.def Info: saeFigs/sigmoidKL.png used on input line 211.
+(pdftex.def)             Requested size: 75.92314pt x 75.92241pt.
 
-<saeFigs/atanKL.png, id=36, 223.83624pt x 220.825pt>
+<saeFigs/atanKL.png, id=34, 223.83624pt x 220.825pt>
 File: saeFigs/atanKL.png Graphic file (type png)
  <use saeFigs/atanKL.png>
-Package pdftex.def Info: saeFigs/atanKL.png used on input line 194.
-(pdftex.def)             Requested size: 73.36247pt x 72.37715pt.
+Package pdftex.def Info: saeFigs/atanKL.png used on input line 212.
+(pdftex.def)             Requested size: 75.92314pt x 74.90091pt.
 
-<sparsesigmoidnn.png, id=37, 669.50125pt x 669.50125pt>
-File: sparsesigmoidnn.png Graphic file (type png)
+<saeFigs/sineKL.png, id=35, 240.9pt x 238.8925pt>
+File: saeFigs/sineKL.png Graphic file (type png)
+ <use saeFigs/sineKL.png>
+Package pdftex.def Info: saeFigs/sineKL.png used on input line 215.
+(pdftex.def)             Requested size: 75.92314pt x 75.28798pt.
 
-<use sparsesigmoidnn.png>
-Package pdftex.def Info: sparsesigmoidnn.png used on input line 202.
-(pdftex.def)             Requested size: 220.09488pt x 220.0984pt.
- <linearnn.png, id=38, 277.035pt x 277.035pt>
-File: linearnn.png Graphic file (type png)
-
-<use linearnn.png>
-Package pdftex.def Info: linearnn.png used on input line 203.
-(pdftex.def)             Requested size: 220.09488pt x 220.09381pt.
- <pca.png, id=39, 631.35875pt x 630.355pt>
-File: pca.png Graphic file (type png)
- <use pca.png>
-Package pdftex.def Info: pca.png used on input line 204.
-(pdftex.def)             Requested size: 220.09488pt x 219.74266pt.
-
-<nonlinearnn.png, id=40, 629.35126pt x 629.35126pt>
-File: nonlinearnn.png Graphic file (type png)
- <use nonlinearnn.png>
-Package pdftex.def Info: nonlinearnn.png used on input line 205.
-(pdftex.def)             Requested size: 220.09488pt x 220.09378pt.
-
-Underfull \hbox (badness 1259) in paragraph at lines 216--216
+Underfull \hbox (badness 5954) in paragraph at lines 246--246
 []\OT1/cmr/bx/n/14.4 Generalized Sparse Au-toen-
  []
 
 
-Overfull \hbox (10.16553pt too wide) detected at line 227
+Overfull \hbox (1.62962pt too wide) detected at line 258
 \OML/cmm/m/it/10 J\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W; b\OT1/cmr/m/n/10 ) = [] 
 [] \OML/cmm/m/it/10 `\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; x[]\OT1/cmr/m/n/10 ) + \OML
@@ -484,64 +479,55 @@ Overfull \hbox (10.16553pt too wide) detected at line 227
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 260--261
-[]\OT1/cmr/m/n/10 Computing the gra-di-ent of $\OML/cmm/m/it/10  \OT1/cmr/m/n/1
-0 (\OML/cmm/m/it/10 W; b\OT1/cmr/m/n/10 )$ is typ-i-cally
- []
-
-
-Overfull \hbox (24.74658pt too wide) in paragraph at lines 277--277
+Overfull \hbox (16.21068pt too wide) in paragraph at lines 308--308
 [] 
  []
 
 
-Overfull \hbox (34.9922pt too wide) in paragraph at lines 285--285
+Overfull \hbox (26.4563pt too wide) in paragraph at lines 316--316
 [] 
  []
 
-(./finalReport.bbl [2] [3 <./aeFigs/sigmoid.png> <./aeFigs/atan.png> <./aeFigs/
-id.png> <./aeFigs/sin.png> <./aeFigs/pca.png> <./saeFigs/sigmoidNone.png> <./sa
-eFigs/atanNone.png> <./saeFigs/idNone.png> <./saeFigs/sineNone.png> <./saeFigs/
-sigmoidL1.png> <./saeFigs/atanL1.png> <./saeFigs/idL1.png> <./saeFigs/sineL1.pn
-g> <./saeFigs/sigmoidL2.png> <./saeFigs/atanL2.png> <./saeFigs/idL2.png> <./sae
-Figs/sineL2.png> <./saeFigs/sigmoidKL.png> <./saeFigs/atanKL.png>] [4 <./sparse
-sigmoidnn.png> <./linearnn.png> <./pca.png> <./nonlinearnn.png>]
-Underfull \hbox (badness 1960) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 fan Mai, and Car-o-line Suen.  UFLDL tu-to-
- []
+(./finalReport.bbl [2]) [3
 
-) [5
-
-] (./finalReport.aux) ) 
+ <./aeFigs/sigmoid.png> <./aeFigs/atan.png> <./aeFigs/id.png> <./aeFigs/sin.png
+> <./aeFigs/pca.png>] [4 <./saeFigs/sigmoidNone.png> <./saeFigs/atanNone.png> <
+./saeFigs/idNone.png> <./saeFigs/sineNone.png> <./saeFigs/sigmoidL1.png> <./sae
+Figs/atanL1.png> <./saeFigs/idL1.png> <./saeFigs/sineL1.png> <./saeFigs/sigmoid
+L2.png> <./saeFigs/atanL2.png> <./saeFigs/idL2.png> <./saeFigs/sineL2.png> <./s
+aeFigs/sigmoidKL.png> <./saeFigs/atanKL.png> <./saeFigs/sineKL.png>] (./finalRe
+port.aux) ) 
 Here is how much of TeX's memory you used:
- 3282 strings out of 493488
- 44867 string characters out of 3141326
- 131452 words of memory out of 3000000
- 6500 multiletter control sequences out of 15000+200000
- 11571 words of font info for 46 fonts, out of 3000000 for 9000
+ 3312 strings out of 493488
+ 45338 string characters out of 3141326
+ 132028 words of memory out of 3000000
+ 6529 multiletter control sequences out of 15000+200000
+ 11878 words of font info for 47 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,17n,32p,608b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
-pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on finalReport.pdf (5 pages, 985418 bytes).
+ 38i,19n,32p,706b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on finalReport.pdf (4 pages, 724321 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,7 +8,10 @@
 \usepackage{url}
 \usepackage{multirow}
 \usepackage{rotating}
-\usepackage[margin=2.2cm]{geometry}
+\usepackage{footnote}
+\usepackage[margin=1.9cm]{geometry}
+
+\makesavenoteenv{tabular}
 
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\ra}{\rightarrow}
@@ -88,10 +91,8 @@ third term enforces a $\phi$-sparsity constraint on the mean activation of each 
 \subsection{Equivalence with PCA}
 An autoencoder that does not include the regularization or sparsity terms learns
 a feature representation that is closely related to the principal components of
-the training data \cite{bourlard1988auto}. We implemented this type of
-autoencoder on the MNIST dataset and also ran principal component analysis on
-the same dataset; the learned features can be seen in Figure~\ref{fig:features}.
-The learned features appear to be qualitatively similar.
+the training data \cite{bourlard1988auto}. This result holds for any activation
+function $f$ that can be approximated by an affine function near the origin.
 
 This equivalence between ``vanilla'' autoencoders and principal component
 analysis suggests that the recent success of autoencoders is due to the
@@ -108,14 +109,19 @@ attempt only to learn the identity. However, the universal approximation result
 motivates the belief that autencoders can learn nontrivial, data-dependent forms
 of the identity.
 
-\section{Sparse Linear Autoencoders}
-We next considered a sparse linearized autoencoder where the transfer function
-is simply the identity function. The objective function for this autoencoder is
-the sum of the $\ell^2$ reconstruction error, an $\ell^2$ regularization term on
-the network weights, and an $\ell^2$ sparsity constraint of the form
-$\|\rho-\hat\rho\|_2^2$ where as above $\hat\rho_j$ is the mean activation of
-the $j$th hidden unit on the training set. The learned features for this
-autoencoder is shown in Figure~\ref{fig:features}.
+% \section{Sparse Linear Autoencoders}
+% We next considered a sparse linearized autoencoder where the transfer function
+% is simply the identity function. The objective function for this autoencoder is
+% the sum of the $\ell^2$ reconstruction error, an $\ell^2$ regularization term on
+% the network weights, and an $\ell^2$ sparsity constraint of the form
+% $\|\rho-\hat\rho\|_2^2$ where as above $\hat\rho_j$ is the mean activation of
+% the $j$th hidden unit on the training set. The learned features for this
+% autoencoder is shown in Figure~\ref{fig:features}.
+
+\section{Experiments}
+\subsection{Equivalence with PCA}
+In order to experimentally test the claim that 
+\subsection{Generalized Sparse Autoencoders}
 
 \section{Discussion}
 Our experimentation so far has led us to focus on the sparsity constraint of the
@@ -148,15 +154,15 @@ transfer function is a Taylor approximation to the sigmoid function.
   \centering
   \begin{tabular}{|C|CCCC|C|}
   \hline
-  Transfer function $f(z)$ & $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $\sin(z)$ & PCA \\
+  Transfer function $f(z)$ & $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $1/2+\sin(z)/2$ & PCA \\
   Learned features
     & \includegraphics[width=0.15\textwidth]{aeFigs/sigmoid.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/atan.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/id.png}
-    & \includegraphics[width=0.15\textwidth]{aeFigs/sin.png} 
+    & \includegraphics[width=0.15\textwidth]{aeFigs/sin.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/pca.png} \\
-  Training Error & 99.95\% & 90.50\% & 99.95\% & 100.00\% & 100.00\% \\
-  Testing Error & 82.00\% & 80.05\% & 82.00\% & 81.80\% & 82.30\% \\
+  Training Error & 99.95\% & 90.50\% & 99.95\% & 99.95\% & 100.00\% \\
+  Testing Error & 82.00\% & 80.05\% & 82.00\% & 79.60\% & 82.30\% \\
   \hline
   \end{tabular}
   \caption{Single layer autoencoders with no regularization or sparsity penalty were trained on
@@ -165,6 +171,7 @@ transfer function is a Taylor approximation to the sigmoid function.
     are shown. We compare with a softmax classifier trained on PCA features extracted from the same
     training data. In all cases the trained feature transform and classifier are tested on a different
     set of 2000 MNIST images.}
+  \label{table:noSparse}
 \end{table*}
 
 \newcommand{\figalign}[3]{
@@ -177,50 +184,63 @@ transfer function is a Taylor approximation to the sigmoid function.
     \vspace{0.25pc}
   \end{minipage}
 }
+\begin{savenotes} 
 \begin{table*}
   \centering
   \begin{tabular}{|c|C|CCCC|}
     \hline
     && \multicolumn{4}{c|}{Transfer function $f(z)$} \\ \cline{3-6}
-    && $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $\sin(z)$ \\ \hline
+    && $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $1/2+\sin(z)/2$ \\ \hline
     \multirow{4}{*}{\begin{sideways}\hspace{-4pc}Sparsity penalty $\phi(\hat\rho_j)$\end{sideways}}    
     & 0 
       & \figalign{saeFigs/sigmoidNone.png}{98.75\%}{84.90\%}
       & \figalign{saeFigs/atanNone.png}{98.90\%}{85.20\%}
       & \figalign{saeFigs/idNone.png}{100.00\%}{82.85\%}
-      & \figalign{saeFigs/sineNone.png}{100.00\%}{81.90\%} \\ \cline{2-6}
+      & \figalign{saeFigs/sineNone.png}{99.90\%}{83.00\%} \\ \cline{2-6}
     & $|\hat\rho_j-\rho|$
       & \figalign{saeFigs/sigmoidL1.png}{88.50\%}{80.45\%}
       & \figalign{saeFigs/atanL1.png}{75.55\%}{67.45\%}
       & \figalign{saeFigs/idL1.png}{99.60\%}{79.85\%}
-      & \figalign{saeFigs/sineL1.png}{99.70\%}{80.30\%} \\ \cline{2-6}
+      & \figalign{saeFigs/sineL1.png}{96.30\%}{79.90\%} \\ \cline{2-6}
     & $(\hat\rho_j-\rho)^2$
       & \figalign{saeFigs/sigmoidL2.png}{99.85\%}{91.30\%}
       & \figalign{saeFigs/atanL2.png}{99.75\%}{90.45\%}
       & \figalign{saeFigs/idL2.png}{100.00\%}{83.30\%}
-      & \figalign{saeFigs/sineL2.png}{100.00\%}{82.15\%} \\ \cline{2-6}
+      & \figalign{saeFigs/sineL2.png}{99.85\%}{88.45\%} \\ \cline{2-6}
     & $KL(\rho\|\hat\rho_j)$
       & \figalign{saeFigs/sigmoidKL.png}{99.75\%}{90.30\%}
       & \figalign{saeFigs/atanKL.png}{99.50\%}{90.00\%}
-      & 3 & 4 \\
+      & \footnote{The KL sparsity penalty is only defined when the activations are constrained to lie in
+        $(0,1)$.}
+        & \figalign{saeFigs/sineKL.png}{99.70\%}{88.90\%} \\
     \hline
   \end{tabular}
+  \caption{We trained single layer autoencoders with $\ell^2$ regularization
+    and a variety of activation functions and sparsity constraints. In all cases
+    we learned a 200-dimensional feature transform; for each case we show a
+    small representative subset of these features. Each autoencoder was trained
+    using 2000 MNIST images and in each case the extracted feature transform was
+    used to train a softmax classifier. The final classifier was then tested on
+    a different set of 2000 MNIST images. The accuracy on the training and test
+    sets respectively are shown beneath each visualized feature transform.}
+  \label{table:sparse-ae}
 \end{table*}
+\end{savenotes}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.45\textwidth]{sparsesigmoidnn.png}
-  \includegraphics[width=0.45\textwidth]{linearnn.png}
-  \includegraphics[width=0.45\textwidth]{pca.png}
-  \includegraphics[width=0.45\textwidth]{nonlinearnn.png}
-  \caption{Learned features for MNIST using different methods.
-      Upper left: Sparse (nonlinear) autoencoder.
-      Upper right: Sparse linear autoencoder.
-      Lower left: Principal component analysis.
-      Lower right: nonlinear autoencoder.
-    }
-  \label{fig:features}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{sparsesigmoidnn.png}
+%   \includegraphics[width=0.45\textwidth]{linearnn.png}
+%   \includegraphics[width=0.45\textwidth]{pca.png}
+%   \includegraphics[width=0.45\textwidth]{nonlinearnn.png}
+%   \caption{Learned features for MNIST using different methods.
+%       Upper left: Sparse (nonlinear) autoencoder.
+%       Upper right: Sparse linear autoencoder.
+%       Lower left: Principal component analysis.
+%       Lower right: nonlinear autoencoder.
+%     }
+%   \label{fig:features}
+% \end{figure*}
 
 \appendix
 \section{Generalized Sparse Autoencoders}

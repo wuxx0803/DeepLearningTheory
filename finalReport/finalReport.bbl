@@ -29,10 +29,6 @@ Quoc~V Le, Rajat Monga, Matthieu Devin, Greg Corrado, Kai Chen, Marc'Aurelio
 \newblock Building high-level features using large scale unsupervised learning.
 \newblock {\em arXiv preprint arXiv:1112.6209}, 2011.
 
-\bibitem{lecun1998mnist}
-Yann LeCun and Corinna Cortes.
-\newblock The mnist database of handwritten digits, 1998.
-
 \bibitem{lee2009convolutional}
 Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y Ng.
 \newblock Convolutional deep belief networks for scalable unsupervised learning

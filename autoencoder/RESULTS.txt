@@ -340,3 +340,62 @@ phi = @phiNone;
 softmaxLambda = 1e-4;
 Training accuracy: 2000 / 2000 = 100.000000%
 Testing accuracy: 1636 / 2000 = 81.800000%
+
+------
+Sine results from above here are bogus; need to rescale to be in (0, 1)
+
+fig31.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiKL;
+softmaxLambda = 1e-4;
+Training accuracy: 1994 / 2000 = 99.700000%
+Testing accuracy: 1778 / 2000 = 88.900000%
+
+fig32.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiL2;
+softmaxLambda = 1e-4;
+Training accuracy: 1997 / 2000 = 99.850000%
+Testing accuracy: 1769 / 2000 = 88.450000%
+
+fig33.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiL1;
+softmaxLambda = 1e-4;
+Training accuracy: 1926 / 2000 = 96.300000%
+Testing accuracy: 1598 / 2000 = 79.900000%
+
+fig34.png
+hiddenSize = 200;
+lambda = 3e-3;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1998 / 2000 = 99.900000%
+Testing accuracy: 1660 / 2000 = 83.000000%
+
+fig35.png
+hiddenSize = 200;
+% lambda = 3e-3;
+lambda = 0;
+beta = 3;
+rho = 0.1;
+f = @sineTransfer;
+phi = @phiNone;
+softmaxLambda = 1e-4;
+Training accuracy: 1999 / 2000 = 99.950000%
+Testing accuracy: 1592 / 2000 = 79.600000%
