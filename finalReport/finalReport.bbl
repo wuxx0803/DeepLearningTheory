@@ -1,4 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{blum1992training}
+Avrim~L Blum and Ronald~L Rivest.
+\newblock Training a 3-node neural network is {NP}-complete.
+\newblock {\em Neural Networks}, 5(1):117--127, 1992.
 
 \bibitem{bourlard1988auto}
 Herv{\'e} Bourlard and Yves Kamp.
@@ -28,6 +33,10 @@ Quoc~V Le, Rajat Monga, Matthieu Devin, Greg Corrado, Kai Chen, Marc'Aurelio
   Ranzato, Jeff Dean, and Andrew~Y Ng.
 \newblock Building high-level features using large scale unsupervised learning.
 \newblock {\em arXiv preprint arXiv:1112.6209}, 2011.
+
+\bibitem{lecun1998mnist}
+Yann LeCun and Corinna Cortes.
+\newblock The mnist database of handwritten digits, 1998.
 
 \bibitem{lee2009convolutional}
 Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y Ng.

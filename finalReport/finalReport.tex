@@ -144,7 +144,39 @@ section.
 
 \section{Experiments}
 \subsection{Equivalence with PCA}
-In order to experimentally test the claim that 
+We first studied the empirical relationship between PCA and autoencoders with
+various activation functions. In order to remain consistent with the analysis
+in \cite{bourlard1988auto} we set $\lambda=\beta=0$ to omit the regularization
+and sparsity penalty terms. For each choice of activation function we trained
+an autoencoder using 2000 images from the MNIST \cite{lecun1998mnist} training
+set.
+
+Once an autoencoder has been trained, we can treat the activations of the hidden
+units on any input as a feature transform of that input. In the language of
+Appendix~\ref{gen_sparse_auto}, this feature transform is $\at(x)=f(\Wo x+\bo)$.
+We can visualize this feature transform by viewing each row of $\Wo$ as a linear
+filter against which the input $x$ is matched.
+
+For each activation function considered, the feature transform of the corresponding
+trained autoencoder was used to train a softmax classifier
+to recognize digits. Each classifier was evaluated on both the training set and
+a test set consisting of 2000 additional MNIST images.
+
+We also computed the first 200 principal components of the training data.
+Projecting any input $x$ onto the first 200 principal components of the
+training data gives a feature transform of the input $x$. We used this feature
+transform to train a softmax classifier.
+
+Table~\ref{table:noSparse} shows a subset of the features learned by each
+autoencoder, a subset of the first 200 principal components of the data, and
+the performance of each trained softmax classifier on the training and testing
+sets. Qualitatively, some of the features learned by the autoencoders look
+similar to the principal components of the training data. The sigmoid, identity,
+and sinusoidal activation functions give rise to feature transforms that perform
+very similarly to the PCA feature transform. The feature transform learned from
+the arctangent activation function appears to be underfitting the training data;
+this could indicate that the underlying autoencoder was not fully trained.
+
 \subsection{Generalized Sparse Autoencoders}
 
 \section{Discussion}
@@ -158,8 +190,8 @@ theoretical implications of these sorts of constraints. In addition to the
 linearized autoencoder, we would also like to experiment with networks whose
 transfer function is a Taylor approximation to the sigmoid function.
 
-\newcolumntype{C}{ >{\centering\arraybackslash} m{0.15\linewidth} }
-\newcolumntype{D}{ >{\centering\arraybackslash} m{12pc} }
+\newcolumntype{C}{ >{\centering\arraybackslash} m{0.155\linewidth} }
+\newcolumntype{D}{ >{\centering\arraybackslash} m{0.145\linewidth} }
 % \begin{table*}
 %   \centering
 %   \begin{tabular}{CCCC}
@@ -176,17 +208,17 @@ transfer function is a Taylor approximation to the sigmoid function.
 
 \begin{table*}
   \centering
-  \begin{tabular}{|C|CCCC|C|}
+  \begin{tabular}{|C|DDDD|D|}
   \hline
-  Transfer function $f(z)$ & $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $1/2+\sin(z)/2$ & PCA \\
+  Activation function $f(z)$ & $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $1/2+\sin(z)/2$ & PCA \\
   Learned features
     & \includegraphics[width=0.15\textwidth]{aeFigs/sigmoid.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/atan.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/id.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/sin.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/pca.png} \\
-  Training Error & 99.95\% & 90.50\% & 99.95\% & 99.95\% & 100.00\% \\
-  Testing Error & 82.00\% & 80.05\% & 82.00\% & 79.60\% & 82.30\% \\
+  Training accuracy & 99.95\% & 90.50\% & 99.95\% & 99.95\% & 100.00\% \\
+  Testing accuracy & 82.00\% & 80.05\% & 82.00\% & 79.60\% & 82.30\% \\
   \hline
   \end{tabular}
   \caption{Single layer autoencoders with no regularization or sparsity penalty were trained on
@@ -194,7 +226,8 @@ transfer function is a Taylor approximation to the sigmoid function.
     In all cases we learned a 200-dimensional feature transform; a small subset of these features
     are shown. We compare with a softmax classifier trained on PCA features extracted from the same
     training data. In all cases the trained feature transform and classifier are tested on a different
-    set of 2000 MNIST images.}
+    set of 2000 MNIST images. For reference, a softmax classifier trained directly from the pixel values
+    of the training data achieves a training accuracy of 100.00\% and a testing accuracy of 82.90\%.}
   \label{table:noSparse}
 \end{table*}
 
