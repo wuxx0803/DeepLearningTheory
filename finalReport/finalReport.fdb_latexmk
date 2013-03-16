@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex finalReport"] 1363403796 "finalReport.aux" "finalReport.bbl" "finalReport" 1363403831
+["bibtex finalReport"] 1363403990 "finalReport.aux" "finalReport.bbl" "finalReport" 1363403992
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "finalReport.aux" 1363403831 2677 42b2b5de76ad302d27c4c7ade5f22d4e ""
+  "finalReport.aux" 1363403992 2914 759018b5c0f5de9cadea8871920e51a7 ""
   "finalReport.bcf" 0 -1 0 ""
-  "refs.bib" 1363386697 3406 8bccaf435339cc7ef58030921c40d5e5 ""
+  "refs.bib" 1363403869 3616 8a79385e97cd8b2b660dccf7a60ad0e8 ""
   (generated)
   "finalReport.bbl"
   "finalReport.blg"
-["pdflatex"] 1363403829 "finalReport.tex" "finalReport.pdf" "finalReport" 1363403831
+["pdflatex"] 1363403991 "finalReport.tex" "finalReport.pdf" "finalReport" 1363403992
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -101,9 +101,9 @@
   "aeFigs/pca.png" 1363389171 18943 32a7e0776f6e86f17bbc0e3388d48738 ""
   "aeFigs/sigmoid.png" 1363387950 26166 f7861ad4d33324a35e07a5ed3594e078 ""
   "aeFigs/sin.png" 1363403732 27427 4e3c9d48e0c5d97e1385488cb57f0db0 ""
-  "finalReport.aux" 1363403831 2677 42b2b5de76ad302d27c4c7ade5f22d4e ""
-  "finalReport.bbl" 1363403796 1729 a026b0a4561b68f990e32520d2335a26 "bibtex finalReport"
-  "finalReport.tex" 1363403829 15647 7ab408bd62246d27fbff65cd479a9872 ""
+  "finalReport.aux" 1363403992 2914 759018b5c0f5de9cadea8871920e51a7 ""
+  "finalReport.bbl" 1363403991 1867 be1cb0ca91f597c3ccd1e3c2ce99244b "bibtex finalReport"
+  "finalReport.tex" 1363403988 17168 b70f80ffc568ca75cc4015c6b60c6e90 ""
   "saeFigs/atanKL.png" 1363396512 16260 fb81c14ced08b7b9afc5f0632334a272 ""
   "saeFigs/atanL1.png" 1363395365 28681 ef22616aa5ca1faf75ee8484b08ab772 ""
   "saeFigs/atanL2.png" 1363396146 15179 d1d194b022f6cfa8e8c2860990987f33 ""

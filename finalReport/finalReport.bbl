@@ -41,4 +41,9 @@ Andrew Ng, Jiquan Ngiam, Chuan~Yu Foo, Yifan Mai, and Caroline Suen.
 \newblock {UFLDL} tutorial.
 \newblock \url{http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial}.
 
+\bibitem{rudin1991functional}
+Walter Rudin.
+\newblock Functional analysis. international series in pure and applied
+  mathematics, 1991.
+
 \end{thebibliography}

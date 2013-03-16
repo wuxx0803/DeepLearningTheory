@@ -4,29 +4,35 @@
 \citation{krizhevsky2012imagenet}
 \citation{le2011building}
 \citation{le2011building}
+\citation{cybenko1989approximation}
 \citation{bourlard1988auto}
 \citation{cybenko1989approximation}
+\citation{rudin1991functional}
+\citation{rudin1991functional}
+\citation{bourlard1988auto}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Sparse Autoencoder}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Theoretical Underpinnings}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Equivalence with PCA}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Universal Approximation}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Equivalence with PCA}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Generalized Sparse Autoencoders}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Universal Approximation}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}NP-Hardness}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Equivalence with PCA}{1}}
 \citation{ufldl-tutorial}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Equivalence with PCA}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Generalized Sparse Autoencoders}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Generalized Sparse Autoencoders}{2}}
+\newlabel{gen_sparse_auto}{{A}{2}}
 \bibstyle{plain}
 \bibdata{refs}
 \bibcite{bourlard1988auto}{1}
 \bibcite{cybenko1989approximation}{2}
 \bibcite{hinton2006fast}{3}
 \bibcite{krizhevsky2012imagenet}{4}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Generalized Sparse Autoencoders}{2}}
-\newlabel{gen_sparse_auto}{{A}{2}}
 \bibcite{le2011building}{5}
 \bibcite{lee2009convolutional}{6}
 \bibcite{ufldl-tutorial}{7}
+\bibcite{rudin1991functional}{8}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Single layer autoencoders with no regularization or sparsity penalty were trained on 2000 MNIST images and the extracted feature transform was used to train a softmax classifier. In all cases we learned a 200-dimensional feature transform; a small subset of these features are shown. We compare with a softmax classifier trained on PCA features extracted from the same training data. In all cases the trained feature transform and classifier are tested on a different set of 2000 MNIST images.}}{3}}
 \newlabel{table:noSparse}{{1}{3}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces We trained single layer autoencoders with $\ell ^2$ regularization and a variety of activation functions and sparsity constraints. In all cases we learned a 200-dimensional feature transform; for each case we show a small representative subset of these features. Each autoencoder was trained using 2000 MNIST images and in each case the extracted feature transform was used to train a softmax classifier. The final classifier was then tested on a different set of 2000 MNIST images. The accuracy on the training and test sets respectively are shown beneath each visualized feature transform.}}{4}}
