@@ -367,13 +367,13 @@ importance of the sparsity penalty.
 
 We train a generalized sparse autoencoder using gradient descent.
 For the remainder of the discussion we assume that $\ell(x,y)=\frac12\|x-y\|^2$;
-this allows us to use the standard backpropogation algorithm to compute
+this allows us to use the standard backpropagation algorithm to compute
 the gradient of the reconstruction error term. For notational convenience, for $x\in\RR^n$ define
 \begin{align*}
   \zt(x) &=\Wo x+\bo && \at(x) = f(\zt(x)) \\
   \zr(x) &=\Wt\at(x)+\bt && \ar(x) = f(\zr(x))
 \end{align*}
-In the standard backpropogation algorithm we define
+In the standard backpropagation algorithm we define
 \begin{align*}
   \dr(x) &= -(x-\ar(x))\odot f'(\zr(x)) \\
   \dt(x) &= \left((\Wt)^T\dr(x)\right)\odot f'(\zt(x))
@@ -404,7 +404,7 @@ A bit of arithmetic shows that
       0 & \textrm{otherwise}
     \end{cases}
 \end{align*}
-A bit more arithmetic shows that if we modify the standard backpropogation algorithm and by setting
+A bit more arithmetic shows that if we modify the standard backpropagation algorithm and by setting
 \[\dt_i(x) = \left(\sum_{j=1}^p\Wt_{ji}\dr_j(x)+\beta\phi'(\hat\rho_i)\right)f'\left(\zt_i(x)\right)\]
 the the gradient of the sparse autoencoder objective function is simply
 \begin{align*}
