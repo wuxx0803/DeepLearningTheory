@@ -38,6 +38,12 @@ Quoc~V Le, Rajat Monga, Matthieu Devin, Greg Corrado, Kai Chen, Marc'Aurelio
 Yann LeCun and Corinna Cortes.
 \newblock The {MNIST} database of handwritten digits, 1998.
 
+\bibitem{lee2007efficient}
+Honglak Lee, Alexis Battle, Rajat Raina, and Andrew~Y Ng.
+\newblock Efficient sparse coding algorithms.
+\newblock {\em Advances in neural information processing systems}, 19:801,
+  2007.
+
 \bibitem{lee2009convolutional}
 Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y Ng.
 \newblock Convolutional deep belief networks for scalable unsupervised learning
@@ -54,5 +60,16 @@ Andrew Ng, Jiquan Ngiam, Chuan~Yu Foo, Yifan Mai, and Caroline Suen.
 Walter Rudin.
 \newblock Functional analysis. international series in pure and applied
   mathematics, 1991.
+
+\bibitem{rumelhart2002learning}
+David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Cognitive modeling}, 1:213, 2002.
+
+\bibitem{shen2008sparse}
+Haipeng Shen and Jianhua~Z Huang.
+\newblock Sparse principal component analysis via regularized low rank matrix
+  approximation.
+\newblock {\em Journal of multivariate analysis}, 99(6):1015--1034, 2008.
 
 \end{thebibliography}
