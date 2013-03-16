@@ -36,7 +36,7 @@ Quoc~V Le, Rajat Monga, Matthieu Devin, Greg Corrado, Kai Chen, Marc'Aurelio
 
 \bibitem{lecun1998mnist}
 Yann LeCun and Corinna Cortes.
-\newblock The mnist database of handwritten digits, 1998.
+\newblock The {MNIST} database of handwritten digits, 1998.
 
 \bibitem{lee2009convolutional}
 Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y Ng.

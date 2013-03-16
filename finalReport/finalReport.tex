@@ -178,6 +178,33 @@ the arctangent activation function appears to be underfitting the training data;
 this could indicate that the underlying autoencoder was not fully trained.
 
 \subsection{Generalized Sparse Autoencoders}
+The theoretical results of \cite{bourlard1988auto} and the empirical results of
+the previous section suggest that autoencoders cannot learn novel feature
+transforms unless the optimization objective is modified. To this end, we
+trained autoencoders using a variety of activation functions and sparsity
+constraint functions. We use the regularizer
+$\psi(W,b)=\frac12\|\Wo\|_F+\frac12\|\Wt\|_F$
+where $\|A\|_F$ is the Frobenius norm.
+
+As in the previous section, the feature transform of each trained autoencoder
+is used to train a softmax classifier. The results of these experiments are
+found in Table~\ref{table:sparse-ae}. In all cases we take $\rho=0.1$.
+
+The autoencoders trained with the empty sparsity penalty $\phi(\hat\rho_j)=0$
+are essentially the same as the autoencoders from the previous section with the
+addition of regularization on $W$. The learned features are similar, but the
+softmax classifier enjoys lower generalization error.
+
+The $\ell^1$ sparsity penalty $\phi(\hat\rho_j)=|\hat\rho_j-\rho|$ gives rise
+to classifiers that perform worse than a softmax classifier trained only on the
+pixel values of the training set. We did not experiment extensively with different
+values of the parameters $\lambda,\beta$, and $\rho$; it is possible that a better
+choice of parameters would result in better classifiers in these cases.
+
+For all but the identity activation function, 
+the $\ell^2$ sparsity penalty $\phi(\hat\rho_j)=(\hat\rho_j-\rho)^2$ and the KL
+sparsity penalty give rise to classifiers that significantly outperform all other
+classifiers considered.
 
 \section{Discussion}
 Our experimentation so far has led us to focus on the sparsity constraint of the
@@ -254,7 +281,7 @@ transfer function is a Taylor approximation to the sigmoid function.
   \centering
   \begin{tabular}{|c|C|CCCC|}
     \hline
-    && \multicolumn{4}{c|}{Transfer function $f(z)$} \\ \cline{3-6}
+    && \multicolumn{4}{c|}{Activation function $f(z)$} \\ \cline{3-6}
     && $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $1/2+\sin(z)/2$ \\ \hline
     \multirow{4}{*}{\begin{sideways}\hspace{-4pc}Sparsity penalty $\phi(\hat\rho_j)$\end{sideways}}    
     & 0 
