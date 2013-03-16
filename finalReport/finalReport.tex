@@ -66,7 +66,7 @@ In this project we aim to explore different varieties of autoencoders and
 understand why they work.
 
 \section{Sparse Autoencoder} A sparse autoencoder is a neural network with a
-single hidden layer. Autoencoders attempts to learn nontrivial representations
+single hidden layer. Autoencoders attempt to learn nontrivial representations
 of the identity function on the training examples. These representations are
 consequently used as input features for classifiers. 
 
@@ -84,7 +84,7 @@ In this section we survey certain theoretical properties of neural nets and
 autoencoders. We start with a general property of neural nets, the universal
 approximation result \cite{cybenko1989approximation}, which proves that
 arbitrary continuous functions may be uniformly approximated by single-layer
-nets. We continue to discuss a NP-Hardness result \cite{blum1992training}, which
+nets. We continue to discuss a NP-hardness result \cite{blum1992training}, which
 establishes the complexity of training even a single-layer net. We end by
 discussing a surprising result which shows that, in the absence of sparsity and
 regularization, autoencoders are simply a form of PCA \cite{bourlard1988auto}.
@@ -109,7 +109,7 @@ they attempt only to learn the identity. However, the universal
 approximation result motivates the belief that autencoders can learn
 highly nontrivial, data-dependent representations of the identity.
 
-\subsection{NP-Hardness}
+\subsection{NP-hardness}
 Training a neural network classifier with $n$-dimensional inputs and only $3$
 hidden units is NP-hard when $\sigma$ is a Heaviside step function
 \cite{blum1992training}. The proof shows that there exist some sets of training
@@ -209,7 +209,7 @@ classifiers considered.
 
 \section{Discussion}
 Our experimentation so far has led us to focus on the sparsity constraint of the
-autoencoder. Our results demonstrate that either sigmoidal or trigonometric
+autoencoder. Our results demonstrate that either sigmoidal or sinusoidal 
 activation functions are necessary to achieve performant behavior. Moreover,
 $\KL$ and $\ell^2$ sparsity seem to perform better than $\ell^1$ or nonexistent
 sparsity. Future work might consider more rigorous mathematical justification
