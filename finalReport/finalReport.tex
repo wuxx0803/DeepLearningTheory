@@ -11,6 +11,7 @@
 \usepackage[margin=2.2cm]{geometry}
 
 \newcommand{\RR}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
 \newcommand{\ra}{\rightarrow}
 \newcommand{\Wo}{W^{(1)}}
 \newcommand{\Wt}{W^{(2)}}
@@ -96,26 +97,43 @@ regularization, autoencoders are simply a form of PCA \cite{bourlard1988auto}.
 
 \subsection{Universal Approximation}
 Neural networks with one hidden layer are capable of uniformly approximating
-arbitrary continuous functions \cite{cybenko1989approximation}. This result,
-which follows from a form of generalized fourier analysis, implies that neural
-nets are capable of learning arbitrary classifiers. Note though, that
-autoencoders are distinct from general neural networks, since autoencoders
-attempt only to learn the identity. However, the universal approximation result
-motivates the belief that autencoders can learn nontrivial, data-dependent forms
-of the identity.
+arbitrary continuous functions \cite{cybenko1989approximation}. More precisely,
+finite linear combinations of the form
+
+\[\sum_{j=1}^N \alpha_j \sigma(w_j^T x + b_j), \]
+
+(where $\sigma$ is a ``sigmoidal'' function, \textit{i.e.}, $\lim_{x \to \infty}
+\sigma(x) = 1$ and $\lim_{x \to -\infty} \sigma(x) = 0$) can uniformly
+approximate any continuous function on $\R^n$.
+This result follows from basic functional analysis and from injectivity of the
+Fourier transform \cite{rudin1991functional}. Further arguments based on the
+Stone-Weierstrass theorem or Wiener's Tauberian theorem allow the result to be
+extended to more general classes of activation functions such as $\sigma =
+\sin(nt)$ or $\sigma = \exp(nt)$ \cite{rudin1991functional}.
+
+Note that these approximation results don't apply directly to autoencoders; 
+autoencoders are distinct from general neural networks, since
+they attempt only to learn the identity. However, the universal
+approximation result motivates the belief that autencoders can learn
+highly nontrivial, data-dependent representations of the identity.
 
 \subsection{NP-Hardness}
 TO BE ADDED.
 
 \subsection{Equivalence with PCA}
-An autoencoder that does not include the regularization or sparsity terms learns
-a feature representation that is closely related to the principal components of
-the training data \cite{bourlard1988auto}. 
+An autoencoder that does not include regularization $\psi$ or sparsity $\phi$
+learns a feature representation that is closely related to the principal
+components of the training data \cite{bourlard1988auto}. In the absence of
+$\phi$ or $\psi$, the cost vector is simply the $L^2$ difference between the
+training data and autoencoder output. Using the fact that singular value
+decomposition provides the optimal rank $p$ approximation to a $n$ dimensional
+vector, we may then directly solve for the weight and bias vectors.
 
-This equivalence between ``vanilla'' autoencoders and principal component
-analysis suggests that the recent success of autoencoders is due to the
-additional constraints placed upon their parameters. This motivates a more
-in-depth analysis of the sparsity constraint.
+The interesting consequence is that the nonlinearity of the autoencoder,
+dependent on choice of activation $f$, is meaningless without appropriate choice
+of regularizer or sparsity. This result motivates our in-depth empirical study
+of the relations between the activation and sparsity functions in the next
+section.
 
 \section{Sparse Linear Autoencoders}
 We next considered a sparse linearized autoencoder where the transfer function
