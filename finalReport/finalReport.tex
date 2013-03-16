@@ -99,17 +99,15 @@ regularization, autoencoders are simply a form of PCA \cite{bourlard1988auto}.
 Neural networks with one hidden layer are capable of uniformly approximating
 arbitrary continuous functions \cite{cybenko1989approximation}. More precisely,
 finite linear combinations of the form
-
 \[\sum_{j=1}^N \alpha_j \sigma(w_j^T x + b_j), \]
-
 (where $\sigma$ is a ``sigmoidal'' function, \textit{i.e.}, $\lim_{x \to \infty}
 \sigma(x) = 1$ and $\lim_{x \to -\infty} \sigma(x) = 0$) can uniformly
-approximate any continuous function on $\R^n$.
-This result follows from basic functional analysis and from injectivity of the
-Fourier transform \cite{rudin1991functional}. Further arguments based on the
-Stone-Weierstrass theorem or Wiener's Tauberian theorem allow the result to be
-extended to more general classes of activation functions such as $\sigma =
-\sin(nt)$ or $\sigma = \exp(nt)$ \cite{rudin1991functional}.
+approximate any continuous function on $\R^n$.  This result follows from basic
+functional analysis and from injectivity of the Fourier transform
+\cite{rudin1991functional}. Further arguments based on the Stone-Weierstrass
+theorem or Wiener's Tauberian theorem allow the result to be extended to more
+general classes of activation functions such as $\sigma = \sin(nt)$ or $\sigma =
+\exp(nt)$ \cite{rudin1991functional}.
 
 Note that these approximation results don't apply directly to autoencoders; 
 autoencoders are distinct from general neural networks, since
