@@ -181,12 +181,20 @@ this could indicate that the underlying autoencoder was not fully trained.
 
 \section{Discussion}
 Our experimentation so far has led us to focus on the sparsity constraint of the
-autoencoder.  For the remainder of the term we will consider other variants on
-this constraint both on nonlinear and linearized networks. In particular, we
-will experiment with $\ell^1$ and $\ell^2$ sparsity constraints on the nonlinear
-network and an $\ell^1$ sparsity constraint on the linearized network. Depending
-on the results of these experiments, we will attempt to understand the
-theoretical implications of these sorts of constraints. In addition to the
+autoencoder. Our results demonstrate that the sigmoidal form of the activation
+function is necessary to achieve performant behavior. Moreover, correct choice
+of sparsity function seems necessary for good performance.
+
+We noticed that the training using the back-propagation algorithm
+\cite{rumelhart2002learning} was quite slow compared to the PCA algorithm. The
+difference arises from the fact that PCA exploits highly-tuned linear-algebraic
+procedures rather than the gradient descent of back-propagation. However, as we
+have previously seen, autoencoders (in the absence of sparsity and
+regularization) reduce to PCA. This result motivates a search for a suitable
+``sparse PCA'' algorithm which retains the efficiency of PCA while inheriting
+the flexibility of the sparse autoencoder. Some prior steps 
+
+In addition to the
 linearized autoencoder, we would also like to experiment with networks whose
 transfer function is a Taylor approximation to the sigmoid function.
 
