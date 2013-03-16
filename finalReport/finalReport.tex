@@ -41,26 +41,29 @@
 \maketitle
 
 \section{Introduction}
-In recent years a variety of deep learning algorithms, including deep belief networks
-\cite{hinton2006fast,lee2009convolutional} and deep neural networks, both convolutional
-\cite{krizhevsky2012imagenet} and non-convolutional \cite{le2011building}. The types of
-networks that are typically used in these applications are very complicated, and studying
-their theoretical properties is very difficult.
+In recent years a variety of deep learning algorithms (including deep belief
+networks \cite{hinton2006fast,lee2009convolutional} and deep neural networks,
+\cite{krizhevsky2012imagenet}, \cite{le2011building}) have risen to prominence.
+The types of networks that are typically used in these applications are 
+complicated, and studying their theoretical properties is difficult. In this
+project, we take first steps towards greater theoretical understanding of
+deep learning by surveying the prior literature and performing empirical
+studies.
 
-Some approaches have utilized unsupervised
-pretraining of deep neural networks in order to improve performance on classification tasks
-\cite{le2011building}. One of the fundamental building blocks of this unsupervised pretraining
-process is the sparse autoencoder. A single-layer autoencoder is a much simpler object than
-an entire deep network, but even this relatively simple object has not been well-studied
-theoretically.
+We focus our work on a simple building-block of complicated deep networks: the
+sparse autoencoders. Past approaches have utilized features learned from
+unsupervised pretraining of deep neural networks in order to improve performance
+on classification tasks \cite{le2011building}. The sparse autoencoder is a
+fundamental building block of this unsupervised pretraining process. A
+single-layer autoencoder is a much simpler object than an entire deep network,
+but even this relatively simple object has not been well-studied theoretically.
+In this project we aim to explore different varieties of autoencoders and
+understand why they work.
 
-In this project we aim to explore different varieties of autoencoders and to try and understand
-why they work.
-
-\section{Sparse Autoencoder}
-A sparse autoencoder is a neural network with a single hidden layer that attempts to learn the
-identity function. The transfer function in these networks is nonlinear; in our experiments we use
-the sigmoid transfer function $f(z)=1/(1+e^{-z})$.
+\section{Sparse Autoencoder} A sparse autoencoder is a neural network with a
+single hidden layer that attempts to learn the identity function. The transfer
+function in these networks is nonlinear; in our experiments we use the sigmoid
+transfer function $f(z)=1/(1+e^{-z})$.
 
 Neural net weights are learned by minimizing an objective function consisting
 of three terms. The first term is the $\ell^2$ reconstruction error of the training data.
@@ -75,7 +78,8 @@ We implemented this algorithm and ran it on the MNIST dataset \cite{lecun1998mni
 feature transform is shown in Figure~\ref{fig:features}. Qualitatively, the learned features
 roughly correspond to local object parts.
 
-\section{Equivalence with PCA}
+\section{Theoretical Underpinnings}
+\subsection{Equivalence with PCA}
 An autoencoder that does not include the regularization or sparsity terms learns
 a feature representation that is closely related to the principal components of
 the training data \cite{bourlard1988auto}. We implemented this type of
@@ -88,7 +92,7 @@ analysis suggests that the recent success of autoencoders is due to the
 additional constraints placed upon their parameters. This motivates a more
 in-depth analysis of the sparsity constraint.
 
-\section{Universal Approximation}
+\subsection{Universal Approximation}
 Neural networks with one hidden layer are capable of uniformly approximating
 arbitrary continuous functions \cite{cybenko1989approximation}. This result,
 which follows from a form of generalized fourier analysis, implies that neural
