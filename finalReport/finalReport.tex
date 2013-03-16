@@ -75,24 +75,14 @@ data. The second term is $\psi$-regularization of the weight vectors, and the
 third term enforces a $\phi$-sparsity constraint on the mean activation of each hidden layer neuron over the training set. Further details are given in Appendix
 \ref{gen_sparse_auto}.
 
-%\[\sum_{j=1}^p\left(\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\rho}{1-\hat\rho_j}\right)\]
-
-%where the hidden layer contains $p$ neurons, $\hat\rho_j$ is the mean activation
-%of the $j$th hidden layer neuron over the training set, and $\rho$ is a constant
-%controlling the desired sparsity.  The weights of the trained network can be
-%viewed as a feature transform for the training data.  We implemented this
-%algorithm and ran it on the MNIST dataset \cite{lecun1998mnist}; the learned
-%feature transform is shown in Figure~\ref{fig:features}. Qualitatively, the
-%learned features roughly correspond to local object parts.
-
 \section{Theoretical Underpinnings}
 In this section we survey certain theoretical properties of neural nets and
 autoencoders. We start with a general property of neural nets, the universal
 approximation result \cite{cybenko1989approximation}, which proves that
 arbitrary continuous functions may be uniformly approximated by single-layer
-nets. We continue to discuss a NP-Hardness result CITE, which establishes the
-complexity of training even a single-layer net. We end by discussing a
-surprising result which shows that, in the absence of sparsity and
+nets. We continue to discuss a NP-Hardness result \cite{blum1992training}, which
+establishes the complexity of training even a single-layer net. We end by
+discussing a surprising result which shows that, in the absence of sparsity and
 regularization, autoencoders are simply a form of PCA \cite{bourlard1988auto}.
 
 \subsection{Universal Approximation}
@@ -116,7 +106,14 @@ approximation result motivates the belief that autencoders can learn
 highly nontrivial, data-dependent representations of the identity.
 
 \subsection{NP-Hardness}
-TO BE ADDED.
+Training a neural network classifier with $n$-dimensional inputs and only $3$
+hidden units is NP-hard when $\sigma$ is a Heaviside step function
+\cite{blum1992training}. The proof shows that there exist some sets of training
+data $X$ such that learning a correct classifier on the data is combinatorially
+intractable. This result emphasizes the fact that training of a
+general neural network may be infeasible. However, the hardness result holds
+only for a specific class of network, and as the next section will show, certain
+types of neural networks may be efficiently learned.
 
 \subsection{Equivalence with PCA}
 An autoencoder that does not include regularization $\psi$ or sparsity $\phi$
