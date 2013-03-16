@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex finalReport"] 1363410612 "finalReport.aux" "finalReport.bbl" "finalReport" 1363410614
+["bibtex finalReport"] 1363411542 "finalReport.aux" "finalReport.bbl" "finalReport" 1363411544
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "finalReport.aux" 1363410614 3466 5af858aaa769eb8ee835f8c21eae2a6d ""
+  "finalReport.aux" 1363411544 3663 f11d164d92873a2f7ada6aed4c7a46b7 ""
   "finalReport.bcf" 0 -1 0 ""
-  "refs.bib" 1363410607 4779 30c56e833924e00b21e5e4b5a645f3c1 ""
+  "refs.bib" 1363411541 5138 acd0fb5b464e77cb4d87a1c6bfdd82c4 ""
   (generated)
   "finalReport.bbl"
   "finalReport.blg"
-["pdflatex"] 1363410613 "finalReport.tex" "finalReport.pdf" "finalReport" 1363410614
+["pdflatex"] 1363411543 "finalReport.tex" "finalReport.pdf" "finalReport" 1363411544
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -37,14 +37,11 @@
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
-  "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
-  "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
-  "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
@@ -101,9 +98,9 @@
   "aeFigs/pca.png" 1363389171 18943 32a7e0776f6e86f17bbc0e3388d48738 ""
   "aeFigs/sigmoid.png" 1363387950 26166 f7861ad4d33324a35e07a5ed3594e078 ""
   "aeFigs/sin.png" 1363403732 27427 4e3c9d48e0c5d97e1385488cb57f0db0 ""
-  "finalReport.aux" 1363410614 3466 5af858aaa769eb8ee835f8c21eae2a6d ""
-  "finalReport.bbl" 1363410613 2812 4f22f5015ccf41176020c3e57edb2238 "bibtex finalReport"
-  "finalReport.tex" 1363410607 21582 7e731699e4ee5e519e415df75bfcb0b0 ""
+  "finalReport.aux" 1363411544 3663 f11d164d92873a2f7ada6aed4c7a46b7 ""
+  "finalReport.bbl" 1363411543 3096 2dbdfb4da97d88f648514eac7b417c3a "bibtex finalReport"
+  "finalReport.tex" 1363411479 21694 966dd4ca126dba3bc51730cd55016c87 ""
   "saeFigs/X.png" 1363410471 5832 a4643f327333026ced02e31921f9921a ""
   "saeFigs/atanKL.png" 1363396512 16260 fb81c14ced08b7b9afc5f0632334a272 ""
   "saeFigs/atanL1.png" 1363395365 28681 ef22616aa5ca1faf75ee8484b08ab772 ""

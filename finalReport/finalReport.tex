@@ -48,7 +48,7 @@
 \section{Introduction}
 In recent years a variety of deep learning algorithms (including deep belief
 networks \cite{hinton2006fast,lee2009convolutional} and deep neural networks,
-\cite{krizhevsky2012imagenet}, \cite{le2011building}) have risen to prominence.
+\cite{krizhevsky2012imagenet,le2011building}) have risen to prominence.
 The types of networks that are typically used in these applications are 
 complicated, and studying their theoretical properties is difficult. In this
 project, we take first steps towards greater theoretical understanding of
@@ -56,7 +56,7 @@ deep learning by surveying the prior literature and performing empirical
 studies.
 
 We focus our work on a simple building-block of complicated deep networks: the
-sparse autoencoders. Past approaches have utilized features learned from
+sparse autoencoder. Past approaches have utilized features learned from
 unsupervised pretraining of deep neural networks in order to improve performance
 on classification tasks \cite{le2011building}. The sparse autoencoder is a
 fundamental building block of this unsupervised pretraining process. A
@@ -307,9 +307,8 @@ provide directions for this investigation.
     & $KL(\rho\|\hat\rho_j)$
       & \figalign{saeFigs/sigmoidKL.png}{99.75\%}{90.30\%}
       & \figalign{saeFigs/atanKL.png}{99.50\%}{90.00\%}
-      & \figalign{saeFigs/X.png}{}{}\footnote{The KL sparsity penalty is only defined when the activations are constrained to lie in
-        $(0,1)$.}
-        & \figalign{saeFigs/sineKL.png}{99.70\%}{88.90\%} \\
+      & \figalign{saeFigs/X.png}{}{}
+      & \figalign{saeFigs/sineKL.png}{99.70\%}{88.90\%} \\
     \hline
   \end{tabular}
   \caption{We trained single layer autoencoders with $\ell^2$ regularization
@@ -319,7 +318,9 @@ provide directions for this investigation.
     using 2000 MNIST images and in each case the extracted feature transform was
     used to train a softmax classifier. The final classifier was then tested on
     a different set of 2000 MNIST images. The accuracy on the training and test
-    sets respectively are shown beneath each visualized feature transform.}
+    sets respectively are shown beneath each visualized feature transform.
+    Note that the KL sparsity penalty is only defined when $\hat\rho_j\in(0,1)$; this
+    is not true in general for $f(z)=z$.}
   \label{table:sparse-ae}
 \end{table*}
 \end{savenotes}
@@ -411,6 +412,7 @@ the the gradient of the sparse autoencoder objective function is simply
   \nabla_{W^{(k)}}J(W,b) &= \frac1m\sum_{i=1}^m\delta^{(k+1)}(\xii)a^{(k)}(\xii)^T
     + \lambda\nabla_{W^{(k)}}\psi(W,b)
 \end{align*}
+The objective function can then be minimized using a gradient-descent method such as \cite{zhu1997algorithm}.
 
 \bibliographystyle{plain}
 \bibliography{refs}

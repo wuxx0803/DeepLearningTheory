@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAR 2013 22:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAR 2013 22:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,15 +494,15 @@ Package pdftex.def Info: saeFigs/X.png used on input line 310.
 <saeFigs/sineKL.png, id=43, 240.9pt x 238.8925pt>
 File: saeFigs/sineKL.png Graphic file (type png)
  <use saeFigs/sineKL.png>
-Package pdftex.def Info: saeFigs/sineKL.png used on input line 312.
+Package pdftex.def Info: saeFigs/sineKL.png used on input line 311.
 (pdftex.def)             Requested size: 78.45648pt x 77.79951pt.
 
-Underfull \hbox (badness 5954) in paragraph at lines 343--343
+Underfull \hbox (badness 5954) in paragraph at lines 344--344
 []\OT1/cmr/bx/n/14.4 Generalized Sparse Au-toen-
  []
 
 
-Overfull \hbox (1.62962pt too wide) detected at line 355
+Overfull \hbox (1.62962pt too wide) detected at line 356
 \OML/cmm/m/it/10 J\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W; b\OT1/cmr/m/n/10 ) = [] 
 [] \OML/cmm/m/it/10 `\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; x[]\OT1/cmr/m/n/10 ) + \OML
@@ -511,12 +511,12 @@ Overfull \hbox (1.62962pt too wide) detected at line 355
  []
 
 
-Overfull \hbox (16.21068pt too wide) in paragraph at lines 405--405
+Overfull \hbox (16.21068pt too wide) in paragraph at lines 406--406
 [] 
  []
 
 
-Overfull \hbox (26.4563pt too wide) in paragraph at lines 413--413
+Overfull \hbox (26.4563pt too wide) in paragraph at lines 414--414
 [] 
  []
 
@@ -544,37 +544,34 @@ moidL2.png> <./saeFigs/atanL2.png> <./saeFigs/idL2.png> <./saeFigs/sineL2.png>
 <./saeFigs/sigmoidKL.png> <./saeFigs/atanKL.png> <./saeFigs/X.png> <./saeFigs/s
 ineKL.png>] (./finalReport.aux) ) 
 Here is how much of TeX's memory you used:
- 3325 strings out of 493488
- 45531 string characters out of 3141326
- 133069 words of memory out of 3000000
- 6541 multiletter control sequences out of 15000+200000
+ 3326 strings out of 493488
+ 45549 string characters out of 3141326
+ 134073 words of memory out of 3000000
+ 6542 multiletter control sequences out of 15000+200000
  11878 words of font info for 47 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,19n,32p,780b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,17n,32p,844b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb>
-Output written on finalReport.pdf (5 pages, 538089 bytes).
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb>
+Output written on finalReport.pdf (5 pages, 734352 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
