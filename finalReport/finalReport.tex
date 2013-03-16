@@ -1,10 +1,13 @@
 \documentclass[twocolumn]{article}
+\usepackage{array}
 \usepackage{fullpage}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{multirow}
+\usepackage{rotating}
 \usepackage[margin=2.2cm]{geometry}
 
 \newcommand{\RR}{\mathbb{R}}
@@ -54,7 +57,6 @@ theoretically.
 In this project we aim to explore different varieties of autoencoders and to try and understand
 why they work.
 
-\vspace{-0.5pc}
 \section{Sparse Autoencoder}
 A sparse autoencoder is a neural network with a single hidden layer that attempts to learn the
 identity function. The transfer function in these networks is nonlinear; in our experiments we use
@@ -73,7 +75,6 @@ We implemented this algorithm and ran it on the MNIST dataset \cite{lecun1998mni
 feature transform is shown in Figure~\ref{fig:features}. Qualitatively, the learned features
 roughly correspond to local object parts.
 
-\vspace{-1.1pc}
 \section{Equivalence with PCA}
 An autoencoder that does not include the regularization or sparsity terms learns
 a feature representation that is closely related to the principal components of
@@ -87,7 +88,6 @@ analysis suggests that the recent success of autoencoders is due to the
 additional constraints placed upon their parameters. This motivates a more
 in-depth analysis of the sparsity constraint.
 
-\vspace{-1.1pc}
 \section{Universal Approximation}
 Neural networks with one hidden layer are capable of uniformly approximating
 arbitrary continuous functions \cite{cybenko1989approximation}. This result,
@@ -98,7 +98,6 @@ attempt only to learn the identity. However, the universal approximation result
 motivates the belief that autencoders can learn nontrivial, data-dependent forms
 of the identity.
 
-\vspace{-1pc}
 \section{Sparse Linear Autoencoders}
 We next considered a sparse linearized autoencoder where the transfer function
 is simply the identity function. The objective function for this autoencoder is
@@ -118,7 +117,73 @@ on the results of these experiments, we will attempt to understand the
 theoretical implications of these sorts of constraints. In addition to the
 linearized autoencoder, we would also like to experiment with networks whose
 transfer function is a Taylor approximation to the sigmoid function.
-  
+
+\newcolumntype{C}{ >{\centering\arraybackslash} m{0.15\linewidth} }
+\newcolumntype{D}{ >{\centering\arraybackslash} m{12pc} }
+% \begin{table*}
+%   \centering
+%   \begin{tabular}{CCCC}
+%     Transfer function $f(z)$ & Learned Features & Training Error & Testing Error \\
+%     \hline
+%     $1/(1+e^{-z})$ & \includegraphics[width=0.15\textwidth]{aeFigs/sigmoid.png} & 99.95\%  & 82.00\% \\
+%     $\tan^{-1}(z)$ & \includegraphics[width=0.15\textwidth]{aeFigs/atan.png} & 90.50\% & 80.05\% \\
+%     $z$ & \includegraphics[width=0.15\textwidth]{aeFigs/id.png} & 99.95\% & 82.00\% \\
+%     $\sin(z)$ & \includegraphics[width=0.15\textwidth]{aeFigs/sin.png} & 100.00\% & 81.80\% \\
+%     \hline
+%     PCA & \includegraphics[width=0.15\textwidth]{aeFigs/pca.png} & 100.00\% & 82.30\% \\
+%   \end{tabular}
+% \end{table*}
+
+\begin{table*}
+  \centering
+  \begin{tabular}{|C|CCCC|C|}
+  \hline
+  Transfer function $f(z)$ & $1/(1+e^{-z})$ & $\tan^{-1}(z)$ & $z$ & $\sin(z)$ & PCA \\
+  Learned features
+    & \includegraphics[width=0.15\textwidth]{aeFigs/sigmoid.png}
+    & \includegraphics[width=0.15\textwidth]{aeFigs/atan.png}
+    & \includegraphics[width=0.15\textwidth]{aeFigs/id.png}
+    & \includegraphics[width=0.15\textwidth]{aeFigs/sin.png} 
+    & \includegraphics[width=0.15\textwidth]{aeFigs/pca.png} \\
+  Training Error & 99.95\% & 90.50\% & 99.95\% & 100.00\% & 100.00\% \\
+  Testing Error & 82.00\% & 80.05\% & 82.00\% & 81.80\% & 82.30\% \\
+  \hline
+  \end{tabular}
+  \caption{Single layer autoencoders with no regularization or sparsity penalty were trained on
+    2000 MNIST images and the extracted feature transform was used to train a softmax classifier.
+    In all cases we learned a 200-dimensional feature transform; a small subset of these features
+    are shown. We compare with a softmax classifier trained on PCA features extracted from the same
+    training data. In all cases the trained feature transform and classifier are tested on a different
+    set of 2000 MNIST images.}
+\end{table*}
+
+\newcommand{\figalign}[3]{
+  \begin{minipage}[c]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{#1} \\*
+    #2 \\*
+    #3
+  \end{minipage}
+}
+\begin{table*}
+  \centering
+  \begin{tabular}{|c|C|CCCC|}
+    \hline
+    && \multicolumn{4}{c|}{Transfer function $f(z)$} \\ \cline{3-6}
+    && $1/(1+e^{-z})$ & $\tan^{-1}(z)$ & $z$ & $\sin(z)$ \\ \hline
+    \multirow{4}{*}{\begin{sideways}Sparsity penalty $\phi(\hat\rho_j)$\end{sideways}}    
+    & 0 
+      & \figalign{saeFigs/sigmoidNone.png}{98.75\%}{84.90\%}
+      & \figalign{saeFigs/atanNone.png}{98.90\%}{85.20\%}
+      & \figalign{saeFigs/idNone.png}{100.00\%}{82.85\%}
+      & \figalign{saeFigs/sineNone.png}{100.00\%}{81.90\%} \\ \cline{2-6}
+    & $|\hat\rho_j-\rho|$ & 1 & 2 & 3 & 4 \\
+    & $(\hat\rho_j-\rho)^2$ & 1 & 2 & 3 & 4 \\
+    & $KL(\rho\|\hat\rho_j)$ & 1 & 2 & 3 & 4 \\
+    \hline
+  \end{tabular}
+\end{table*}
+
 \begin{figure*}
   \centering
   \includegraphics[width=0.45\textwidth]{sparsesigmoidnn.png}

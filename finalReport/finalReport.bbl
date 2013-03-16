@@ -6,6 +6,12 @@ Herv{\'e} Bourlard and Yves Kamp.
   decomposition.
 \newblock {\em Biological cybernetics}, 59(4):291--294, 1988.
 
+\bibitem{cybenko1989approximation}
+George Cybenko.
+\newblock Approximation by superpositions of a sigmoidal function.
+\newblock {\em Mathematics of Control, Signals, and Systems (MCSS)},
+  2(4):303--314, 1989.
+
 \bibitem{hinton2006fast}
 Geoffrey~E Hinton, Simon Osindero, and Yee-Whye Teh.
 \newblock A fast learning algorithm for deep belief nets.
