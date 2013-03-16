@@ -51,6 +51,11 @@ Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y Ng.
 \newblock In {\em Proceedings of the 26th Annual International Conference on
   Machine Learning}, pages 609--616. ACM, 2009.
 
+\bibitem{liu1989limited}
+Dong~C Liu and Jorge Nocedal.
+\newblock On the limited memory bfgs method for large scale optimization.
+\newblock {\em Mathematical programming}, 45(1):503--528, 1989.
+
 \bibitem{ufldl-tutorial}
 Andrew Ng, Jiquan Ngiam, Chuan~Yu Foo, Yifan Mai, and Caroline Suen.
 \newblock {UFLDL} tutorial.
@@ -71,12 +76,5 @@ Haipeng Shen and Jianhua~Z Huang.
 \newblock Sparse principal component analysis via regularized low rank matrix
   approximation.
 \newblock {\em Journal of multivariate analysis}, 99(6):1015--1034, 2008.
-
-\bibitem{zhu1997algorithm}
-Ciyou Zhu, Richard~H Byrd, Peihuang Lu, and Jorge Nocedal.
-\newblock Algorithm 778: {L-BFGS-B}: Fortran subroutines for large-scale
-  bound-constrained optimization.
-\newblock {\em ACM Transactions on Mathematical Software (TOMS)},
-  23(4):550--560, 1997.
 
 \end{thebibliography}
