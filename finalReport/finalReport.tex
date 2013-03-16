@@ -138,7 +138,7 @@ transfer function is a Taylor approximation to the sigmoid function.
   \centering
   \begin{tabular}{|C|CCCC|C|}
   \hline
-  Transfer function $f(z)$ & $1/(1+e^{-z})$ & $\tan^{-1}(z)$ & $z$ & $\sin(z)$ & PCA \\
+  Transfer function $f(z)$ & $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $\sin(z)$ & PCA \\
   Learned features
     & \includegraphics[width=0.15\textwidth]{aeFigs/sigmoid.png}
     & \includegraphics[width=0.15\textwidth]{aeFigs/atan.png}
@@ -160,9 +160,11 @@ transfer function is a Taylor approximation to the sigmoid function.
 \newcommand{\figalign}[3]{
   \begin{minipage}[c]{\linewidth}
     \centering
+    \vspace{0.25pc}
     \includegraphics[width=\linewidth]{#1} \\*
     #2 \\*
     #3
+    \vspace{0.25pc}
   \end{minipage}
 }
 \begin{table*}
@@ -170,16 +172,27 @@ transfer function is a Taylor approximation to the sigmoid function.
   \begin{tabular}{|c|C|CCCC|}
     \hline
     && \multicolumn{4}{c|}{Transfer function $f(z)$} \\ \cline{3-6}
-    && $1/(1+e^{-z})$ & $\tan^{-1}(z)$ & $z$ & $\sin(z)$ \\ \hline
-    \multirow{4}{*}{\begin{sideways}Sparsity penalty $\phi(\hat\rho_j)$\end{sideways}}    
+    && $1/(1+e^{-z})$ & $1/2+\tan^{-1}(z)/\pi$ & $z$ & $\sin(z)$ \\ \hline
+    \multirow{4}{*}{\begin{sideways}\hspace{-4pc}Sparsity penalty $\phi(\hat\rho_j)$\end{sideways}}    
     & 0 
       & \figalign{saeFigs/sigmoidNone.png}{98.75\%}{84.90\%}
       & \figalign{saeFigs/atanNone.png}{98.90\%}{85.20\%}
       & \figalign{saeFigs/idNone.png}{100.00\%}{82.85\%}
       & \figalign{saeFigs/sineNone.png}{100.00\%}{81.90\%} \\ \cline{2-6}
-    & $|\hat\rho_j-\rho|$ & 1 & 2 & 3 & 4 \\
-    & $(\hat\rho_j-\rho)^2$ & 1 & 2 & 3 & 4 \\
-    & $KL(\rho\|\hat\rho_j)$ & 1 & 2 & 3 & 4 \\
+    & $|\hat\rho_j-\rho|$
+      & \figalign{saeFigs/sigmoidL1.png}{88.50\%}{80.45\%}
+      & \figalign{saeFigs/atanL1.png}{75.55\%}{67.45\%}
+      & \figalign{saeFigs/idL1.png}{99.60\%}{79.85\%}
+      & \figalign{saeFigs/sineL1.png}{99.70\%}{80.30\%} \\ \cline{2-6}
+    & $(\hat\rho_j-\rho)^2$
+      & \figalign{saeFigs/sigmoidL2.png}{99.85\%}{91.30\%}
+      & \figalign{saeFigs/atanL2.png}{99.75\%}{90.45\%}
+      & \figalign{saeFigs/idL2.png}{100.00\%}{83.30\%}
+      & \figalign{saeFigs/sineL2.png}{100.00\%}{82.15\%} \\ \cline{2-6}
+    & $KL(\rho\|\hat\rho_j)$
+      & \figalign{saeFigs/sigmoidKL.png}{99.75\%}{90.30\%}
+      & \figalign{saeFigs/atanKL.png}{99.50\%}{90.00\%}
+      & 3 & 4 \\
     \hline
   \end{tabular}
 \end{table*}
