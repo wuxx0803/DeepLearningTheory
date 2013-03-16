@@ -61,22 +61,28 @@ In this project we aim to explore different varieties of autoencoders and
 understand why they work.
 
 \section{Sparse Autoencoder} A sparse autoencoder is a neural network with a
-single hidden layer that attempts to learn the identity function. The transfer
-function in these networks is nonlinear; in our experiments we use the sigmoid
-transfer function $f(z)=1/(1+e^{-z})$.
+single hidden layer. Autoencoders attempts to learn nontrivial representations
+of the identity function on the training example. These representations are
+consequently used as input features for classifiers. 
 
-Neural net weights are learned by minimizing an objective function consisting
-of three terms. The first term is the $\ell^2$ reconstruction error of the training data.
-The second term is $\ell^2$ regularization of the weight vectors. The third term constrains the
-mean activation of each hidden layer neuron over the training set. The sparsity constraint can take
-many forms, but our initial implementation uses a penalty of the form 
-\[\sum_{j=1}^p\left(\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\rho}{1-\hat\rho_j}\right)\]
-where the hidden layer contains $p$ neurons, $\hat\rho_j$ is the mean activation of the $j$th hidden
-layer neuron over the training set, and $\rho$ is a constant controlling the desired sparsity.
-The weights of the trained network can be viewed as a feature transform for the training data.
-We implemented this algorithm and ran it on the MNIST dataset \cite{lecun1998mnist}; the learned
-feature transform is shown in Figure~\ref{fig:features}. Qualitatively, the learned features
-roughly correspond to local object parts.
+Autoencoders are parameterized by choice of transfer function $f$, choice of
+sparsity $\phi$, and choice of regularization $\psi$.  Neural net weights $W,b$
+are learned by minimizing an objective function $J$ dependent on these choices:
+\[J(W,b)=\frac1m\sum_{i=1}^m\ell(h_{W,b}(\xii),\xii)+\lambda\psi(W,b)+\beta\sum_{j=1}^p\phi(\hat\rho_j)\]
+The first term is the $\ell^2$ reconstruction error of the training
+data. The second term is $\psi$-regularization of the weight vectors, and the
+third term enforces a $\phi$-sparsity constraint on the mean activation of each hidden layer neuron over the training set. Further details are given in Appendix
+\ref{gen_sparse_auto}.
+
+%\[\sum_{j=1}^p\left(\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\rho}{1-\hat\rho_j}\right)\]
+
+%where the hidden layer contains $p$ neurons, $\hat\rho_j$ is the mean activation
+%of the $j$th hidden layer neuron over the training set, and $\rho$ is a constant
+%controlling the desired sparsity.  The weights of the trained network can be
+%viewed as a feature transform for the training data.  We implemented this
+%algorithm and ran it on the MNIST dataset \cite{lecun1998mnist}; the learned
+%feature transform is shown in Figure~\ref{fig:features}. Qualitatively, the
+%learned features roughly correspond to local object parts.
 
 \section{Theoretical Underpinnings}
 \subsection{Equivalence with PCA}
@@ -218,6 +224,7 @@ transfer function is a Taylor approximation to the sigmoid function.
 
 \appendix
 \section{Generalized Sparse Autoencoders}
+\label{gen_sparse_auto}
 In this section we describe a general framework for sparse autoencoders.
 This is a generalization of the sparse autoencoder presented in \cite{ufldl-tutorial}.
 An autoencoder is a neural network with a single hidden layer that attempts to learn the identity function
