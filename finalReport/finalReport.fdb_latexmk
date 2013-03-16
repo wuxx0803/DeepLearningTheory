@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex finalReport"] 1363393623 "finalReport.aux" "finalReport.bbl" "finalReport" 1363394990
+["bibtex finalReport"] 1363393623 "finalReport.aux" "finalReport.bbl" "finalReport" 1363396735
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "finalReport.aux" 1363394990 2016 4efc6001adf4052ec64d1eb24df5c881 ""
+  "finalReport.aux" 1363396734 2016 4efc6001adf4052ec64d1eb24df5c881 ""
   "finalReport.bcf" 0 -1 0 ""
   "refs.bib" 1363386697 3406 8bccaf435339cc7ef58030921c40d5e5 ""
   (generated)
   "finalReport.bbl"
   "finalReport.blg"
-["pdflatex"] 1363394988 "finalReport.tex" "finalReport.pdf" "finalReport" 1363394990
+["pdflatex"] 1363396732 "finalReport.tex" "finalReport.pdf" "finalReport" 1363396735
   "/usr/local/texlive/2012/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -97,15 +97,25 @@
   "aeFigs/pca.png" 1363389171 18943 32a7e0776f6e86f17bbc0e3388d48738 ""
   "aeFigs/sigmoid.png" 1363387950 26166 f7861ad4d33324a35e07a5ed3594e078 ""
   "aeFigs/sin.png" 1363389105 27757 526779463122b5062bfda0f63c29f6d2 ""
-  "finalReport.aux" 1363394990 2016 4efc6001adf4052ec64d1eb24df5c881 ""
+  "finalReport.aux" 1363396734 2016 4efc6001adf4052ec64d1eb24df5c881 ""
   "finalReport.bbl" 1363393623 1844 0434efafb7e46567d7404f8654246492 "bibtex finalReport"
-  "finalReport.tex" 1363394988 13447 6b0358a46a88709a40721b98735958ce ""
+  "finalReport.tex" 1363396730 14073 a0e5bb2db955a850b2eb8e6fd909d76e ""
   "linearnn.png" 1363043175 95794 54f49bb224d3e02c7f5c581bc67d30f6 ""
   "nonlinearnn.png" 1363043175 263975 ca9a02d0a2e929ffd0fa9f32335b2c94 ""
   "pca.png" 1363043175 224370 c44ab893bc14fb050e177f76b34ade5e ""
+  "saeFigs/atanKL.png" 1363396512 16260 fb81c14ced08b7b9afc5f0632334a272 ""
+  "saeFigs/atanL1.png" 1363395365 28681 ef22616aa5ca1faf75ee8484b08ab772 ""
+  "saeFigs/atanL2.png" 1363396146 15179 d1d194b022f6cfa8e8c2860990987f33 ""
   "saeFigs/atanNone.png" 1363394692 17094 84c1d9bba0d638eaf5fd1caf4e9d8a99 ""
+  "saeFigs/idL1.png" 1363395441 27642 ab154a45a0fe69adb91e3f6039e0cb5b ""
+  "saeFigs/idL2.png" 1363396218 26183 75b8211272791e7e8dcc68dc548497cf ""
   "saeFigs/idNone.png" 1363394839 24537 f3e35fcdec497d041c2263bc9d785e2e ""
+  "saeFigs/sigmoidKL.png" 1363396438 15151 cd2650c8acac2fead50352d32e561df7 ""
+  "saeFigs/sigmoidL1.png" 1363395210 28320 814ae67b3b9eafb1d8707fc0369e8b44 ""
+  "saeFigs/sigmoidL2.png" 1363395924 14825 c56bfa4a6b25ccfef694afd6f59901e8 ""
   "saeFigs/sigmoidNone.png" 1363393163 16910 84ad78598d2f6596d6ad3c0537a792e5 ""
+  "saeFigs/sineL1.png" 1363395518 29081 17591d1d8ed873bde34f94bbdc85711a ""
+  "saeFigs/sineL2.png" 1363396305 28170 84be48fedf4435022e6e12205fad60da ""
   "saeFigs/sineNone.png" 1363394933 23914 b8ccf31c687ed6e243d961e846eba73b ""
   "sparsesigmoidnn.png" 1363043175 173622 40992269b3ce4145f47841beea8c18da ""
   (generated)
