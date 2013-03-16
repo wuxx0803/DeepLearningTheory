@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAR 2013 21:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAR 2013 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,7 +480,13 @@ File: saeFigs/atanKL.png Graphic file (type png)
 Package pdftex.def Info: saeFigs/atanKL.png used on input line 296.
 (pdftex.def)             Requested size: 78.45648pt x 77.4011pt.
 
-<saeFigs/sineKL.png, id=38, 240.9pt x 238.8925pt>
+<saeFigs/X.png, id=38, 239.89626pt x 238.8925pt>
+File: saeFigs/X.png Graphic file (type png)
+ <use saeFigs/X.png>
+Package pdftex.def Info: saeFigs/X.png used on input line 297.
+(pdftex.def)             Requested size: 78.45648pt x 78.1276pt.
+
+<saeFigs/sineKL.png, id=39, 240.9pt x 238.8925pt>
 File: saeFigs/sineKL.png Graphic file (type png)
  <use saeFigs/sineKL.png>
 Package pdftex.def Info: saeFigs/sineKL.png used on input line 299.
@@ -509,7 +515,8 @@ ng> <./aeFigs/pca.png>] [4 <./saeFigs/sigmoidNone.png> <./saeFigs/atanNone.png>
  <./saeFigs/idNone.png> <./saeFigs/sineNone.png> <./saeFigs/sigmoidL1.png> <./s
 aeFigs/atanL1.png> <./saeFigs/idL1.png> <./saeFigs/sineL1.png> <./saeFigs/sigmo
 idL2.png> <./saeFigs/atanL2.png> <./saeFigs/idL2.png> <./saeFigs/sineL2.png> <.
-/saeFigs/sigmoidKL.png> <./saeFigs/atanKL.png> <./saeFigs/sineKL.png>]
+/saeFigs/sigmoidKL.png> <./saeFigs/atanKL.png> <./saeFigs/X.png> <./saeFigs/sin
+eKL.png>]
 Overfull \hbox (26.4563pt too wide) in paragraph at lines 400--400
 [] 
  []
@@ -529,10 +536,10 @@ ki / index .
 
 ] (./finalReport.aux) ) 
 Here is how much of TeX's memory you used:
- 3315 strings out of 493488
- 45393 string characters out of 3141326
- 129044 words of memory out of 3000000
- 6532 multiletter control sequences out of 15000+200000
+ 3320 strings out of 493488
+ 45469 string characters out of 3141326
+ 130044 words of memory out of 3000000
+ 6536 multiletter control sequences out of 15000+200000
  11878 words of font info for 47 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,19n,32p,780b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -555,10 +562,10 @@ ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loc
 al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on finalReport.pdf (5 pages, 734128 bytes).
+Output written on finalReport.pdf (5 pages, 758512 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 139 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
