@@ -85,18 +85,14 @@ third term enforces a $\phi$-sparsity constraint on the mean activation of each 
 %learned features roughly correspond to local object parts.
 
 \section{Theoretical Underpinnings}
-\subsection{Equivalence with PCA}
-An autoencoder that does not include the regularization or sparsity terms learns
-a feature representation that is closely related to the principal components of
-the training data \cite{bourlard1988auto}. We implemented this type of
-autoencoder on the MNIST dataset and also ran principal component analysis on
-the same dataset; the learned features can be seen in Figure~\ref{fig:features}.
-The learned features appear to be qualitatively similar.
-
-This equivalence between ``vanilla'' autoencoders and principal component
-analysis suggests that the recent success of autoencoders is due to the
-additional constraints placed upon their parameters. This motivates a more
-in-depth analysis of the sparsity constraint.
+In this section we survey certain theoretical properties of neural nets and
+autoencoders. We start with a general property of neural nets, the universal
+approximation result \cite{cybenko1989approximation}, which proves that
+arbitrary continuous functions may be uniformly approximated by single-layer
+nets. We continue to discuss a NP-Hardness result CITE, which establishes the
+complexity of training even a single-layer net. We end by discussing a
+surprising result which shows that, in the absence of sparsity and
+regularization, autoencoders are simply a form of PCA \cite{bourlard1988auto}.
 
 \subsection{Universal Approximation}
 Neural networks with one hidden layer are capable of uniformly approximating
@@ -107,6 +103,19 @@ autoencoders are distinct from general neural networks, since autoencoders
 attempt only to learn the identity. However, the universal approximation result
 motivates the belief that autencoders can learn nontrivial, data-dependent forms
 of the identity.
+
+\subsection{NP-Hardness}
+TO BE ADDED.
+
+\subsection{Equivalence with PCA}
+An autoencoder that does not include the regularization or sparsity terms learns
+a feature representation that is closely related to the principal components of
+the training data \cite{bourlard1988auto}. 
+
+This equivalence between ``vanilla'' autoencoders and principal component
+analysis suggests that the recent success of autoencoders is due to the
+additional constraints placed upon their parameters. This motivates a more
+in-depth analysis of the sparsity constraint.
 
 \section{Sparse Linear Autoencoders}
 We next considered a sparse linearized autoencoder where the transfer function
