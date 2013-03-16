@@ -13,6 +13,7 @@
 
 \makesavenoteenv{tabular}
 
+\DeclareMathOperator{\KL}{KL}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\ra}{\rightarrow}
@@ -208,22 +209,26 @@ classifiers considered.
 
 \section{Discussion}
 Our experimentation so far has led us to focus on the sparsity constraint of the
-autoencoder. Our results demonstrate that the sigmoidal form of the activation
-function is necessary to achieve performant behavior. Moreover, correct choice
-of sparsity function seems necessary for good performance.
+autoencoder. Our results demonstrate that either sigmoidal or trigonometric
+activation functions are necessary to achieve performant behavior. Moreover,
+$\KL$ and $\ell^2$ sparsity seem to perform better than $\ell^1$ or nonexistent
+sparsity. Future work might consider more rigorous mathematical justification
+for guiding the choice of sparsity function.
 
-We noticed that the training using the back-propagation algorithm
+We also noticed that training using the back-propagation algorithm
 \cite{rumelhart2002learning} was quite slow compared to the PCA algorithm. The
 difference arises from the fact that PCA exploits highly-tuned linear-algebraic
 procedures rather than the gradient descent of back-propagation. However, as we
 have previously seen, autoencoders (in the absence of sparsity and
 regularization) reduce to PCA. This result motivates a search for a suitable
-``sparse PCA'' algorithm which retains the efficiency of PCA while inheriting
-the flexibility of the sparse autoencoder. Some prior steps 
+``sparse encoder PCA'' algorithm which retains the efficiency of PCA while
+inheriting the flexibility of the sparse autoencoder. Some prior work on sparse
+coding \cite{lee2007efficient} and sparse low rank PCA \cite{shen2008sparse} may
+provide directions for this investigation.
 
-In addition to the
-linearized autoencoder, we would also like to experiment with networks whose
-transfer function is a Taylor approximation to the sigmoid function.
+%In addition to the
+%linearized autoencoder, we would also like to experiment with networks whose
+%transfer function is a Taylor approximation to the sigmoid function.
 
 \newcolumntype{C}{ >{\centering\arraybackslash} m{0.155\linewidth} }
 \newcolumntype{D}{ >{\centering\arraybackslash} m{0.145\linewidth} }
