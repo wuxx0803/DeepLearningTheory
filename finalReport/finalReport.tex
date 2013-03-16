@@ -67,11 +67,11 @@ understand why they work.
 
 \section{Sparse Autoencoder} A sparse autoencoder is a neural network with a
 single hidden layer. Autoencoders attempts to learn nontrivial representations
-of the identity function on the training example. These representations are
+of the identity function on the training examples. These representations are
 consequently used as input features for classifiers. 
 
-Autoencoders are parameterized by choice of transfer function $f$, choice of
-sparsity $\phi$, and choice of regularization $\psi$.  Neural net weights $W,b$
+Autoencoders are parameterized by choice of activation function $f$, choice of
+sparsity penalty $\phi$, and choice of regularization $\psi$.  Neural net weights $W,b$
 are learned by minimizing an objective function $J$ dependent on these choices:
 \[J(W,b)=\frac1m\sum_{i=1}^m\ell(h_{W,b}(\xii),\xii)+\lambda\psi(W,b)+\beta\sum_{j=1}^p\phi(\hat\rho_j)\]
 The first term is the $\ell^2$ reconstruction error of the training
