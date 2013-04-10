@@ -50,8 +50,8 @@ def loadMNISTLabels(filename):
 
   labels = frombuffer(s, uint8)
   assert(len(labels) == numLabels)
-  return labels,s
+  return labels
 
 if __name__ == "__main__":
     #images = loadMNISTImages('train-images-idx3-ubyte')
-    labels,s = loadMNISTLabels('train-labels-idx1-ubyte')
+    labels = loadMNISTLabels('train-labels-idx1-ubyte')
