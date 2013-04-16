@@ -1,4 +1,5 @@
 from pylab import *
+from loadmnist import *
 # Code to perform softmax
 
 def h(x, theta):
@@ -41,7 +42,7 @@ def softmaxTrain(inputSize, numClasses, lmbda, inputData, labels, maxIter):
 
   return optTheta
 
-def softmaxCost(theta, numClasses, inputSize, lmbda, data, labels);
+def softmaxCost(theta, numClasses, inputSize, lmbda, data, labels):
   """ numClasses - K number of label classes
       inputSize - the size N of input vector
       lmbda - weight decay parameter
@@ -59,7 +60,7 @@ def softmaxCost(theta, numClasses, inputSize, lmbda, data, labels);
   # Unroll the parameters from theta
   theta = reshape(theta, (K, N), order='F')
 
-  groundTruth = zeros(K, M)
+  groundTruth = zeros((K, M))
   groundTruth[labels,arange(M)] = 1
 
   costMatrix = exp(dot(theta, data))
@@ -112,19 +113,20 @@ def softmaxCost(theta, numClasses, inputSize, lmbda, data, labels);
 #  grad = -(1.0/M) * sum(dataMatrix * coeffMatrix, axis = 1)
 #  return grad
 
-if __name__ = "__main__":
+if __name__ == "__main__":
 
   # Initialize Parameters
   inputSize = 28 * 28
   numClasses = 10
   lmbda = 1e-4
 
-  # Load the Data
+  ## Load the Data
   images =  loadMNISTImages('train-images-idx3-ubyte')
-  labels =  loadMNISTLabels('train-labels-idx3-ubyte')
+  labels =  loadMNISTLabels('train-labels-idx1-ubyte')
 
-  # Relabel 0 to 10
-  labels[labels==0] = 10
+  #labels.flags.writeable = True
+  ### Relabel 0 to 10
+  #labels[labels==0] = 10
 
   inputData = images
 
@@ -133,41 +135,38 @@ if __name__ = "__main__":
   if DEBUG:
       inputSize = 8
       inputData = randn(8,100)
-      labels = randi(10,100,1)
+      labels = randint(10,size=(100,1))
 
-  # Randomly initialize theta
+  ## Randomly initialize theta
   theta = 0.005 * randn(numClasses * inputSize, 1)
 
-  # Find gradient and current softmax cost
+  ## Find gradient and current softmax cost
   cost, grad = softmaxCost(theta, numClasses, inputSize, lmbda, inputData,
           labels)
 
-  # If in debug mode, check the numerical gradient
+  ## If in debug mode, check the numerical gradient
 
-  if DEBUG:
-      numGrad = computeNumericalGradient(lambda x: softmaxCost(x,
-          numClasses, inputSize, lmbda, inputData, labels), theta)
+  #if DEBUG:
+  #    numGrad = computeNumericalGradient(lambda x: softmaxCost(x,
+  #        numClasses, inputSize, lmbda, inputData, labels), theta)
 
-      # Compute the numeric gradient to the analytic gradient
-      diff = norm(numGrad - grad)/norm(numGrad + grad)
-      print("Diff = " + str(diff))
+  #    # Compute the numeric gradient to the analytic gradient
+  #    diff = norm(numGrad - grad)/norm(numGrad + grad)
+  #    print("Diff = " + str(diff))
 
-  # Learn Parameters
-  maxIter = 100
-  softmaxModel = softmaxTrain(inputSize, numClasses, lmbda, inputData, labels,
-          options)
+  ## Learn Parameters
+  #maxIter = 100
+  #softmaxModel = softmaxTrain(inputSize, numClasses, lmbda, inputData, labels,
+  #        options)
 
-  # Test on True Dataset
-  images = loadMNISTImages('t10k-images-idx3-ubyte')
-  labels = loadMNISTLabels('t10k-labels-idx1-ubyte')
-  labels(labels==0) = 10
+  ## Test on True Dataset
+  #images = loadMNISTImages('t10k-images-idx3-ubyte')
+  #labels = loadMNISTLabels('t10k-labels-idx1-ubyte')
+  #labels[labels==0] = 10
 
-  inputData = images
-  pred = softmaxPredict(softmaxModel, inputData)
+  #inputData = images
+  #pred = softmaxPredict(softmaxModel, inputData)
 
-  acc = mean(labels == pred)
+  #acc = mean(labels == pred)
 
-  print("Accuracy: " + str(acc * 100))
-
-if __name__ == "__main__":
-  print "nothing yet!"
+  #print("Accuracy: " + str(acc * 100))
