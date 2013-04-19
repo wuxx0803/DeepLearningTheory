@@ -271,11 +271,11 @@ def checkAutoencoderGradient(hiddenSize, visibleSize, sparsityParam,
     cost, grad = sparseAutoencoderCostVectorized(theta, visibleSize,
         hiddenSize, eta, sparsityParam, beta, patches)
   else:
-    cost, grad = sparseAutoencoderCost(theta, visibleSize, hiddenSize, eta,
+    cost, grad = sparseAutoencoderCostVectorized(theta, visibleSize, hiddenSize, eta,
         sparsityParam, beta, patches)
 
   print "About to computeNumericalGradient"
-  numGrad = computeNumericalGradient(lambda x: sparseAutoencoderCost(x,
+  numGrad = computeNumericalGradient(lambda x: sparseAutoencoderCostVectorized(x,
     visibleSize, hiddenSize, eta, sparsityParam, beta, patches)[0], theta)
 
   diff = norm(numGrad - grad,2)/norm(numGrad+grad,2)
@@ -307,7 +307,7 @@ if __name__ == "__main__":
   beta = 3
   numPatches = 10000
 
-  DEBUG = True
+  DEBUG = False
   if DEBUG:
     numPatches = 10
     patches = sampleImages(numPatches)
