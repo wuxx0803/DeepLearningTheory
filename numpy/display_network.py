@@ -3,6 +3,7 @@ from scipy.io import loadmat
 
 def display_network(A, opt_normalize=True, cols=None):
   # rescale input
+  print "HERE!"
   A = A - mean(A)
   # Compute the rows and columns
   L, M = shape(A)
@@ -26,21 +27,20 @@ def display_network(A, opt_normalize=True, cols=None):
   #k = 1
   print "m: " + str(m)
   print "n: " + str(n)
-  #for i in range(int(m)):
-  #  for j in range(int(n)):
-  #    if k > M:
-  #      continue
-  #    clim = max(abs(A[:,k]))
-  #    base1 = buf + (i - 1) * (sz + buf)
-  #    base2 = buf + (j-1) * (sz + buf)
-  #    if opt_normalize:
-  #      array[base1:base1+sz,base2:base2+sz] = (reshape(A[:,k],
-  #                                              (sz,sz), order='F')/ clim)
-  #    else:
-  #      array[base1:base1+sz, base2:base2+sz] = (reshape(A[:,k],
-  #                                               (sz,sz), order='F')/max(abs(A)))
-  #    k = k + 1
-
-  #plt.imshow(array)
-  #plt.show()
-
+  print "FOO!"
+  for i in range(int(m)):
+    for j in range(int(n)):
+      if k > M:
+        continue
+      clim = max(abs(A[:,k]))
+      base1 = buf + (i - 1) * (sz + buf)
+      base2 = buf + (j-1) * (sz + buf)
+      if opt_normalize:
+        array[base1:base1+sz,base2:base2+sz] = (reshape(A[:,k],
+                                                (sz,sz), order='F')/ clim)
+      else:
+        array[base1:base1+sz, base2:base2+sz] = (reshape(A[:,k],
+                                                 (sz,sz), order='F')/max(abs(A)))
+      k = k + 1
+  plt.imshow(array)
+  plt.show()

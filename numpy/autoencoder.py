@@ -1,7 +1,48 @@
 from pylab import *
 from scipy.io import loadmat
 from scipy.optimize import fmin_l_bfgs_b
-from display_network import *
+
+def display_network(A, opt_normalize=True, cols=None):
+  # rescale input
+  A = A - mean(A)
+  # Compute the rows and columns
+  L, M = shape(A)
+  sz = int(sqrt(L))
+  buf = 1
+  if cols == None:
+    if floor(sqrt(M))**2 != M:
+      n = ceil(sqrt(M))
+      while mod(M,n) != 0 and n < 1.2 * sqrt(M):
+        n += 1
+      m = ceil(M/n)
+    else:
+      n = sqrt(M)
+      m = n
+  else:
+    n = cols
+    m = ceil(M/n)
+  m = int(m)
+  n = int(n)
+
+  arr = -ones((buf + m * (sz + buf), buf + n * (sz + buf)))
+  k = 0
+  for i in range(int(m)):
+    for j in range(int(n)):
+      if k >= M:
+        continue
+      clim = max(abs(A[:,k]))
+      base1 = buf + i * (sz + buf)
+      base2 = buf + j * (sz + buf)
+      if opt_normalize:
+        arr[base1:base1+sz,base2:base2+sz] = (reshape(A[:,k],
+                                                (sz,sz), order='F')/ clim)
+      else:
+        arr[base1:base1+sz, base2:base2+sz] = (reshape(A[:,k],
+                                                 (sz,sz), order='F')/max(abs(A)))
+      k = k + 1
+  plt.imshow(arr, cmap = cm.Greys_r)
+  plt.show()
+  return A
 
 def sampleImages(numPatches):
   # define some constant
@@ -89,6 +130,64 @@ def initializeParameters(hiddenSize, visibleSize):
                       b1.flatten('F'), b2.flatten('F')))
   return theta
 
+def sparseAutoencoderCostVectorized(theta, visibleSize, hiddenSize, eta,
+    sparsityParam, beta, data):
+  L = hiddenSize * visibleSize
+  W1 = reshape(theta[:L],
+      (hiddenSize, visibleSize), order = 'F')
+  W2 = reshape(theta[L:2*L],
+      (visibleSize, hiddenSize), order = 'F')
+  b1 = reshape(theta[2*L:2*L + hiddenSize], (hiddenSize, 1), order='F')
+  b2 = reshape(theta[2*L + hiddenSize:], (visibleSize, 1), order='F')
+
+  # Initialize Parameters
+  cost = 0
+  W1grad = zeros(shape(W1))
+  W2grad = zeros(shape(W2))
+  b1grad = zeros(shape(b1))
+  b2grad = zeros(shape(b2))
+  rho = sparsityParam
+  numExamples = shape(data)[1]
+
+  # Forward propagation
+  a2 = sigmoid(dot(W1, data) + tile(b1, (1, numExamples)))
+  a3 = sigmoid(dot(W2, a2) + tile(b2, (1, numExamples)))
+
+  # Compute average activation of all hidden neurons
+  rhoHat = mean(a2, 1)
+  sparseDelta = beta * ((1 - rho) / (1 - rhoHat) - rho / rhoHat)
+
+  # Backward propagation
+  diff = data - a3
+  delta3 = -diff * a3 * (1 - a3)
+
+  delta2 = ((dot(transpose(W2), delta3) +
+            tile(reshape(sparseDelta, (hiddenSize, 1), order='F'),
+              (1, numExamples)))
+            * a2 * (1 - a2))
+
+  # Square difference term for cost and gradient
+  cost = trace(dot(diff, transpose(diff))) / (2 * numExamples)
+  W1grad = dot(delta2, transpose(data)) / numExamples
+  W2grad = dot(delta3 , transpose(a2)) / numExamples
+  b1grad = sum(delta2, 1) / numExamples
+  b2grad = sum(delta3, 1) / numExamples
+
+  # Add regularization term to cost and gradient
+  cost = cost + (eta / 2) * (norm(W1, 'fro')**2 + norm(W2, 'fro')**2)
+  W1grad = W1grad + eta * W1
+  W2grad = W2grad + eta * W2
+
+  # Add sparsity term to the cost
+  sparseCost = sum(rho * log(rho / rhoHat) + (1 - rho) *
+      log((1-rho)/(1-rhoHat)))
+  cost = cost + beta * sparseCost
+
+  # convert to vector form
+  grad = concatenate((W1grad.flatten('F'), W2grad.flatten('F'),
+          b1grad.flatten('F'), b2grad.flatten('F')))
+  return cost, grad
+
 def sparseAutoencoderCost(theta, visibleSize, hiddenSize, eta, sparsityParam,
     beta, data):
   """ visibleSize: number of input units
@@ -96,7 +195,6 @@ def sparseAutoencoderCost(theta, visibleSize, hiddenSize, eta, sparsityParam,
       eta: weight decay parameter
       sparsityParam: desired average activation for hidden units
       beta: weight for sparsity penalty term
-      TODO: vectorize this code
   """
   L = hiddenSize * visibleSize
   W1 = reshape(theta[:L],
@@ -166,12 +264,15 @@ def sigmoid(x):
   return 1 / (1 + exp(-x))
 
 def checkAutoencoderGradient(hiddenSize, visibleSize, sparsityParam,
-    eta, beta, patches):
-  theta = initializeParameters(hiddenSize, visibleSize)
+    eta, beta, patches, vectorized, theta):
 
   #print "About to compute sparseAutoencoderCost"
-  cost, grad = sparseAutoencoderCost(theta, visibleSize, hiddenSize, eta,
-      sparsityParam, beta, patches)
+  if vectorized:
+    cost, grad = sparseAutoencoderCostVectorized(theta, visibleSize,
+        hiddenSize, eta, sparsityParam, beta, patches)
+  else:
+    cost, grad = sparseAutoencoderCost(theta, visibleSize, hiddenSize, eta,
+        sparsityParam, beta, patches)
 
   print "About to computeNumericalGradient"
   numGrad = computeNumericalGradient(lambda x: sparseAutoencoderCost(x,
@@ -180,22 +281,16 @@ def checkAutoencoderGradient(hiddenSize, visibleSize, sparsityParam,
   diff = norm(numGrad - grad,2)/norm(numGrad+grad,2)
   print str(diff)
   print 'Norm of the difference between numerical and analytical gradient (should be < 1e-9)'
+  return numGrad, grad
 
-def train(numPatches):
+def train(hiddenSize, visibleSize, sparsityParam, eta, beta, numPatches):
   # Set the parameters
-  visibleSize = 8 * 8
-  hiddenSize = 25
-  sparsityParam = 0.01
-  eta = 0.0001
-  beta = 3
   numIter = 400
   L = hiddenSize * visibleSize
   patches = sampleImages(numPatches)
-  #checkAutoencoderGradient(hiddenSize, visibleSize, sparsityParam, eta, beta,
-  #    patches)
 
   theta = initializeParameters(hiddenSize, visibleSize);
-  optTheta, cost, d = fmin_l_bfgs_b(lambda x: sparseAutoencoderCost(x,
+  optTheta, cost, d = fmin_l_bfgs_b(lambda x: sparseAutoencoderCostVectorized(x,
     visibleSize, hiddenSize, eta, sparsityParam, beta, patches), theta,
     maxfun = numIter)
   W1 = reshape(optTheta[0:L], (hiddenSize, visibleSize), order='F')
@@ -205,10 +300,26 @@ def train(numPatches):
   return (W1,W2, b1,b2)
 
 if __name__ == "__main__":
-  #hiddenSize = 25
-  #checkNumericalGradient()
-  #patches = sampleImages()
-  #numgrad, grad = checkNumericalGradient()
-  numPatches = 10
-  W1, W2, b1, b2 = train(numPatches)
-  display_network(transpose(W1))
+  hiddenSize = 25
+  visibleSize = 8 * 8
+  sparsityParam = 0.01
+  eta = 0.0001
+  beta = 3
+  numPatches = 10000
+
+  DEBUG = True
+  if DEBUG:
+    numPatches = 10
+    patches = sampleImages(numPatches)
+    theta = initializeParameters(hiddenSize, visibleSize)
+    print "Vectorized Gradient Check:"
+    numGradV, gradV = checkAutoencoderGradient(hiddenSize, visibleSize,
+        sparsityParam, eta, beta, patches, True, theta)
+    print "Standard Gradient Check:"
+    numGrad, grad = checkAutoencoderGradient(hiddenSize, visibleSize,
+        sparsityParam, eta, beta, patches, False, theta)
+  else:
+    numPatches = 10000
+    W1, W2, b1, b2 = train(hiddenSize, visibleSize, sparsityParam, eta,
+        beta, numPatches)
+    A= display_network(transpose(W1))
