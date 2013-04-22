@@ -54,29 +54,30 @@ def sampleImages(numPatches):
   IMAGES = d['IMAGES']
 
   patches = zeros((patchsize ** 2, numPatches))
-  xSize, ySize, numImages = shape(IMAGES)
 
   # Sample the patches
-  iVals = randint(numImages, size=numPatches)
-  xVals = randint(xSize - patchsize, size=numPatches)
-  yVals = randint(ySize - patchsize, size=numPatches)
+  iVals = randint(shape(IMAGES)[2], size=(numPatches, 1))
+  xVals = randint(shape(IMAGES)[0] - patchsize, size=(numPatches,1))
+  yVals = randint(shape(IMAGES)[1] - patchsize, size=(numPatches,1))
 
-  for n in range(numPatches):
-    i,x,y = iVals[n], xVals[n], yVals[n]
-    patch = IMAGES[y:y+patchsize,x:x+patchsize, i]
-    patches[:,n] = reshape(patch, patchsize ** 2, order='F')
-
+  for p in range(numPatches):
+    i = iVals[p]
+    x = xVals[p]
+    y = yVals[p]
+    patch = IMAGES[y:(y+patchsize),x:x+patchsize, i]
+    patches[:,p] = reshape(patch, patchsize ** 2, order='F')
   patches = normalizeData(patches)
   return patches
 
 def normalizeData(patches):
-  patches = patches - mean(patches)
+  #patches = patches - mean(patches)
+  patches = patches - mean(patches, 0)
 
   # Truncate to +/- 3 standard deviations and scale to -1 to 1
-  pstd = 3 * std(patches)
+  pstd = 3 * std(patches.flatten('F'))
   patches = maximum(minimum(patches, pstd), -pstd) / pstd;
 
-  patches = (patches + 1) * 0.4  + 1
+  patches = (patches + 1) * 0.4  + 0.1
   return patches
 
 def checkNumericalGradient():
@@ -287,7 +288,7 @@ def train(hiddenSize, visibleSize, sparsityParam, eta, beta, numPatches,
     initTheta = None, initPatches = None):
     #opttheta, patches):
   # Set the parameters
-  numIter =100
+  numIter = 400
   L = hiddenSize * visibleSize
   if initPatches == None:
     patches = sampleImages(numPatches)

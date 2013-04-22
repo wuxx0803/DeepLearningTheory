@@ -2,11 +2,12 @@ from pylab import *
 from autoencoder import *
 from scipy.optimize import fmin_l_bfgs_b
 from loadmnist import *
+from softmax import *
 
 def feedForwardAutoencoder(theta, hiddenSize, visibleSize, data):
   L = hiddenSize * visibleSize
-  W1 = reshape(theta[1:L], (hiddenSize, visibleSize), order='F')
-  b1 = theta[2*L:2*L + hiddenSize]
+  W1 = reshape(theta[:L], (hiddenSize, visibleSize), order='F')
+  b1 = reshape(theta[2*L:2*L + hiddenSize], (hiddenSize, 1))
   activation = sigmoid(dot(W1, data) + tile(b1, (1, shape(data)[1])))
   return activation
 
@@ -16,7 +17,7 @@ if __name__ == "__main__":
   hiddenSize = 2
   eta = 3e-3
   beta = 3
-  maxIter = 10
+  maxIter = 1
   sparsityParam = 0.1
   visibleSize = inputSize
 
@@ -34,6 +35,7 @@ if __name__ == "__main__":
   unlabeledData = mnistData[:,unlabeledSet]
 
   trainData = mnistData[:, trainSet]
+  print "shape(trainData): " + str(shape(trainData))
   trainLabels = transpose(mnistLabels[trainSet])
 
   testData = mnistData[:, testSet]
@@ -51,7 +53,7 @@ if __name__ == "__main__":
   # Add call to lbfgs...
   optTheta, cost, d = fmin_l_bfgs_b(lambda x: sparseAutoencoderCostVectorized(x,
     visibleSize, hiddenSize, eta, sparsityParam, beta, unlabeledData), theta,
-    maxfun = maxIter)
+    maxfun = maxIter, iprint=1)
 
   print 'visualizing weights'
   # Visualize Weights
@@ -60,13 +62,14 @@ if __name__ == "__main__":
 
   print 'extracting features and training softmax'
   # Extract the features
-  trainFeatures = feedForwardAutoencoder(opttheta, hiddenSize, inputSize,
+  trainFeatures = feedForwardAutoencoder(optTheta, hiddenSize, inputSize,
       trainData)
 
-  testFeatures = feedForwardAutoencoder(opttheta, hiddenSize, inputSize, testData)
+  testFeatures = feedForwardAutoencoder(optTheta, hiddenSize, inputSize, testData)
 
   # Train the softmax classifier
-  optTheta = softmaxTrain(hiddenSize, 5, 1e-4, trainFeatures, trainLabels);
+  optSoftmaxTheta = softmaxTrain(hiddenSize, numLabels, eta, trainFeatures,
+      trainLabels, maxIter)
 
   pred = softmaxPredict(softmaxModel, testFeatures);
 
